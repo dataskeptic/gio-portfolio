@@ -27,10 +27,33 @@
   }
 }
 
+.container {
+  min-height: 100vh;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.header p {
+  font-size: 1.5rem;
+  color: #666;
+}
+
 .main {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 4rem;
   grid-row-start: 2;
 }
 
@@ -54,6 +77,21 @@
   padding: 2px 4px;
   border-radius: 4px;
   font-weight: 600;
+}
+
+.about,
+.projects,
+.contact {
+  padding: 2rem 0;
+}
+
+.about h2,
+.projects h2,
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--foreground);
+  padding-bottom: 0.5rem;
 }
 
 .ctas {
@@ -163,5 +201,9 @@ a.secondary {
 @media (prefers-color-scheme: dark) {
   .logo {
     filter: invert();
+  }
+
+  .header p {
+    color: #ccc;
   }
 }
