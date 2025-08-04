@@ -169,7 +169,7 @@
   display: inline-block;
 }
 
-.description {
+.subTitle {
   font-family: var(--font-geist-sans);
   font-size: 1rem;
   line-height: 1.5;
@@ -179,12 +179,12 @@
   width: 100%;
 }
 
-.descriptionContainer {
+.subTitleContainer {
   width: 100%;
   margin-top: -2rem;
 }
 
-.descriptionContainer p {
+.subTitleContainer p {
   color: #FFF;
   font-family: Cousine;
   font-size: 1rem;
@@ -238,11 +238,82 @@
     margin-bottom: 2rem;
   }
   
-  .description {
+  .subTitle {
     font-size: 0.875rem;
     padding: 0 1rem;
   }
 }
+
+.portfolioHeaderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 40px; /* Adds some space before the project items */
+}
+
+.contentWrapper {
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.portfolioPill {
+  background-color: #fbeedb;
+  border: 3px solid #E64500;
+  border-radius: 9999px;
+  display: flex;
+  padding: 10px 20px;
+  color: #E64500;
+  font-weight: bold;
+  font-size: 1.75rem;
+  white-space: nowrap;
+  font-family: Cousine;
+  width: 24vw;
+  justify-content: center;
+}
+
+.lineConnector {
+  width: 50px;
+  height: 3px;
+  background-color: #E64500;
+  position: relative;
+}
+
+.lineConnector::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background-color: #E64500;
+  border-radius: 50%;
+}
+
+.quoteContainer {
+  color: #e0e0e0;
+  margin-left: 25px;
+  text-align: left;
+}
+
+.quoteContainer p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.quoteContainer span {
+  display: block;
+  margin-top: 8px;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
 
 
 
