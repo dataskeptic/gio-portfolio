@@ -313,6 +313,84 @@
   padding-right: 30px;
 }
 
+/* Skills Section Styles */
+.skillsSection {
+  padding: 80px 0px; /* Adds space above and below the section */
+  display: flex;
+  justify-content: start;
+  background-color: #1B1B1B; /* Matches your container background */
+}
+
+.skillsContent {
+  background-color: #E64500; /* Uses the main orange from your theme */
+  color: #000000; /* Black text for high contrast */
+  padding: 40px 50px;
+  border-radius: 0px;
+  /*max-width: 1100px;  Aligns with your project card width */
+  width: 50%;
+  font-family: var(--font-geist-sans);
+}
+
+.skillsTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 2rem;
+}
+
+.skillsList {
+  list-style: none; /* Removes default bullet points */
+  padding-left: 0;
+  margin-bottom: 3rem;
+}
+
+.skillsList li {
+  position: relative;
+  padding-left: 25px; /* Creates space for the custom bullet */
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Custom bullet point to match the image */
+.skillsList li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #000000;
+  font-size: 1.5rem; /* Makes the bullet slightly larger */
+  line-height: 1.3;
+}
+
+.toolsTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 1.5rem;
+}
+
+.toolsGrid {
+  display: flex;
+  flex-wrap: wrap; /* Allows icons to wrap on smaller screens */
+  gap: 1.5rem; /* Space between icons */
+  align-items: center;
+}
+
+.toolIcon {
+  background-color: #000000;
+  border-radius: 12px;
+  padding: 12px;
+  height: 64px;
+  width: 64px;
+  object-fit: contain; /* Ensures the logo fits well inside the box */
+  transition: transform 0.2s ease-in-out;
+}
+
+.toolIcon:hover {
+  transform: scale(1.1); /* Adds a little hover effect */
+}
+
 
 @media (max-width: 480px) {
   .mainTitle {

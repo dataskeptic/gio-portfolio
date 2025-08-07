@@ -124,12 +124,73 @@ export default function Home() {
               hoverTitle={jaguaracambeData.hoverTitle}
             />
           </div>
+        </section>
 
+        {/* Habilidades e Conhecimentos Section */}
+        <section className={styles.skillsSection}>
+          <div className={styles.skillsContent}>
+            <h2 className={styles.skillsTitle}>
+              Principais Habilidades e Conhecimentos
+            </h2>
+            <ul className={styles.skillsList}>
+              <li>
+                UX/UI Design para sites e aplicativos (experiência prática em
+                processos completos)
+              </li>
+              <li>Realização de pesquisas</li>
+              <li>Prototipação</li>
+              <li>Design Gráfico</li>
+              <li>Noções de HTML e CSS</li>
+              <li>
+                Design Instrucional: atuação no desenvolvimento de projetos
+                educacionais digitais
+              </li>
+              <li>Criação de sites WordPress com Elementor</li>
+              <li>
+                Atualizada nas principais diretrizes, boas práticas e tendências
+                de design digital
+              </li>
+              <li>
+                Facilidade em seguir cronogramas, com comprometimento e paixão
+                pelo que faço
+              </li>
+            </ul>
+
+            <h3 className={styles.toolsTitle}>Ferramentas</h3>
+            <div className={styles.toolsGrid}>
+              
+              <img
+                src="/icons/figma.svg"
+                alt="Figma logo"
+                className={styles.toolIcon}
+              />
+              <img
+                src="/icons/illustrator.png"
+                alt="Adobe Illustrator logo"
+                className={styles.toolIcon}
+              />
+              <img
+                src="/icons/photoshop.png"
+                alt="Adobe Photoshop logo"
+                className={styles.toolIcon}
+              />
+              <img
+                src="/icons/maze.svg"
+                alt="Maze logo"
+                className={styles.toolIcon}
+              />
+              <img
+                src="/icons/webflow.svg"
+                alt="Webflow logo"
+                className={styles.toolIcon}
+              />
+            </div>
+          </div>
         </section>
 
         <section className={styles.contact}>
           <h2>Contact</h2>
-          {/* Your contact info goes here */}
+          
         </section>
       </main>
     </div>
