@@ -17,6 +17,20 @@ const arqueoProData = {
   hoverTitle: "Solução digital para campo arqueológico: app de coleta de dados integrado com GPS."
 };
 
+const jaguaracambeData = {
+  title: "Novo de design do site da ONG Jaguaracambé (versão de 2023).",
+  tags: ["UX DESIGN", "UI DESIGN", "WEB DESIGN", "LANDING PAGE"],
+  project_description: "Realizei o redesign completo do site da ONG ambientalista, com foco em melhorar a navegação, a clareza das informações e o engajamento do público com as causas e projetos da instituição. Reestruturei a hierarquia de conteúdo para tornar o acesso mais intuitivo e a experiência do usuário mais fluida, tanto em desktop quanto em dispositivos móveis. O design pode ser acessado pelo site oficial da ONG Jaguaracambé, o projeto foi entregue em 2023. As principais melhorias incluem:",
+  features: [
+    "Padronização de cores, tipografia, botões, formulários e espaçamento para criar uma identidade visual coesa;",
+    "Melhoria do contraste entre texto e fundo para garantir legibilidade;",
+    "Criação de hierarquia visual clara com títulos, subtítulos e elementos de destaque;",
+  ],
+  image: "/jaguaracambe.png",
+  hoverTitle: "Redesign do site da ONG Jaguaracambé para melhorar navegação e engajamento."
+};
+
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -91,14 +105,26 @@ export default function Home() {
             </div>
           </div>
 
-          <ProjectCard
-            title={arqueoProData.title}
-            tags={arqueoProData.tags}
-            description={arqueoProData.project_description}
-            features={arqueoProData.features}
-            image={arqueoProData.image}
-            hoverTitle={arqueoProData.hoverTitle}
-          />
+          <div className={styles.projectCardsContainer}>
+            <ProjectCard
+              title={arqueoProData.title}
+              tags={arqueoProData.tags}
+              description={arqueoProData.project_description}
+              features={arqueoProData.features}
+              image={arqueoProData.image}
+              hoverTitle={arqueoProData.hoverTitle}
+            />
+
+            <ProjectCard
+              title={jaguaracambeData.title}
+              tags={jaguaracambeData.tags}
+              description={jaguaracambeData.project_description}
+              features={jaguaracambeData.features}
+              image={jaguaracambeData.image}
+              hoverTitle={jaguaracambeData.hoverTitle}
+            />
+          </div>
+
         </section>
 
         <section className={styles.contact}>

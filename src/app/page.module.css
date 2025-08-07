@@ -194,7 +194,6 @@
 }
 
 .about,
-.projects,
 .contact {
   padding: 4rem 2rem;
   min-height: 50vh;
@@ -207,15 +206,6 @@
   font-size: 2rem;
   margin-bottom: 2rem;
   color: #E64500;
-}
-
-.about p,
-.projects p,
-.contact p {
-  font-family: var(--font-geist-sans);
-  font-size: 1.125rem;
-  line-height: 1.6;
-  color: #ffffff;
 }
 
 /* Responsive Design */
@@ -314,7 +304,14 @@
   font-size: 0.9rem;
 }
 
-
+.projectCardsContainer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-end; /* This aligns flex items to the right */
+  padding-right: 30px;
+}
 
 
 @media (max-width: 480px) {

@@ -6,9 +6,9 @@
   max-width: 1100px;
   min-height: 500px;
   background-color: #fff;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #1B1B1B;
   display: flex; /* This is important for layout but content will be positioned absolutely */
-  margin: 60px auto;
+  margin: 60px 0;
   overflow: hidden;
   font-family: Arial, sans-serif;
 }
@@ -37,7 +37,7 @@
   position: absolute;
   top: 0;
   right: 0; /* Aligned to the right edge of the card */
-  width: 25%; /* Starts by taking up the right 1/4 of the card */
+  width: 24%; /* Starts by taking up the right 1/4 of the card */
   height: 100%;
   /* This is the core animation: expand the width on hover */
   transition: width 0.7s cubic-bezier(0.86, 0, 0.07, 1);
