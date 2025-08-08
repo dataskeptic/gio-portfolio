@@ -30,6 +30,93 @@ const jaguaracambeData = {
   hoverTitle: "Redesign do site da ONG Jaguaracambé para melhorar navegação e engajamento."
 };
 
+// Dados para a seção da Linha do Tempo
+// Cole este array no topo do seu componente Home em page.js
+const timelineData = [
+  {
+    title: "UX/UI Designer - Freelancer/ ONG",
+    subtitle: "Jaguaracambé",
+    details: [
+      "UX/UI Design",
+      "Product Design",
+      "Fluxos de Usuário",
+      "Wireframes",
+      "Prototipagem",
+      "Teste de Usabilidade",
+      "Design de Landing Page",
+    ],
+  },
+  {
+    title: "Superior - Design Gráfico",
+    subtitle: "Tecnólogo, UNOPAR",
+    details: [
+      "Criação de projetos de comunicação visual e design;",
+      "Elaboração e avaliação técnica de projetos;",
+      "Gestão e planejamento de projetos gráficos;",
+      "Métodos e processos de criação em ilustração e design;",
+    ],
+  },
+  {
+    title: "Designer Gráfico - Boon Agência de Marketing",
+    subtitle: "",
+    details: [
+      "Layouts criativos: posts, banners, stories e anúncios, focando em engajamento e identidade visual;",
+      "Adequação de peças para diferentes redes sociais;",
+      "Design de materiais institucionais e promocionais impressos;",
+    ],
+  },
+  {
+    title: "Programa UX Unicórnio",
+    subtitle: "Leandro Rezende",
+    details: [
+      "Formação em UX, UI e Product Design",
+      "Pesquisa de experiência de usuário",
+      "UX Research e UX Strategy",
+      "Design de Interfaces",
+      "Mapeamento de Jornada",
+      "UX em ambientes ágeis",
+      "Interação homem-máquina",
+      "Figma",
+    ],
+  },
+  {
+    title: "Designer Instrucional - FADEX/ Projeto SEDUC TEC",
+    subtitle: "",
+    details: [
+      "Estruturação de roteiros para edição de aulas técnicas para o Ensino Médio;",
+      "Desenvolvimento e conteúdos de aprendizagem: materiais didáticos como textos, roteiros para vídeos, design de cenas e avaliações e recursos multimídia;",
+    ],
+  },
+  {
+    title: "Outro Curso",
+    subtitle: "Tecnólogo, UNOPAR: Arqueologia Digital e Banco de Dados",
+    details: [
+        "Elaboração e avaliação técnica de projetos;",
+        "Gestão e planejamento de projetos gráficos;",
+        "Métodos e processos de criação em ilustração e design;",
+    ],
+  },
+  {
+    title: "UX/UI Designer - Freelancer/ ArqueoPro",
+    subtitle: "",
+    details: [
+      "UX/UI Design",
+      "Product Design",
+      "Arquitetura da Informação",
+      "Pesquisa com usuários",
+      "Fluxos de uso",
+      "Wireframing",
+      "Prototipagem",
+      "Testes de usabilidade",
+      "Style Guide",
+      "Design Gráfico",
+      "Mobile First",
+      "Levantamento de requisitos",
+    ],
+  },
+];
+
+
 
 export default function Home() {
   return (
@@ -187,6 +274,63 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section className={styles.aboutSection}>
+  {/* Cabeçalho "SOBRE A Designer" */}
+  <div className={styles.aboutHeader}>
+    <h2 className={styles.aboutTitle}>SOBRE</h2>
+    <p className={styles.aboutSubtitle}>A Designer</p>
+  </div>
+
+  {/* A Timeline em si */}
+  <div className={styles.timeline}>
+    {/* Este wrapper é essencial para o novo CSS funcionar corretamente */}
+    <div className={styles.timelineItemsWrapper}>
+      {timelineData.map((item, index) => (
+        <div 
+          key={index} 
+          className={`
+            ${styles.timelineItem} 
+            ${index % 2 !== 0 ? styles.left : styles.right}
+            ${index % 2 === 0 ? styles.bigCircle : ''}
+          `}
+        >
+          <div className={styles.timelineContent}>
+            <h3>{item.title}</h3>
+            {item.subtitle && <h4>{item.subtitle}</h4>}
+            <ul>
+              {item.details.map((detail, i) => (
+                <li key={i}>{detail}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    {/* Ícone final da Timeline */}
+    <div className={styles.timelineEnd}>
+      <div className={styles.timelineEndIcon}>
+        <img 
+          src="/icons/hourglass.svg" 
+          alt="Hourglass icon" 
+          className={styles.iconSvg}
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* Título "Cases" - FORA da seção da timeline */}
+<div className={styles.casesHeader}>
+  <div className={styles.casesTitlePill}>
+    Cases
+  </div>
+</div>
+
+
+
+        
 
         <section className={styles.contact}>
           <h2>Contact</h2>
