@@ -401,8 +401,6 @@
   background-color: #1B1B1B;
   position: relative;
   overflow: hidden;
-    border: 1px solid rgb(250, 90, 178);
-
 }
 
 .aboutHeader {
@@ -411,7 +409,6 @@
   margin-bottom: 80px;
   text-align: left;
   box-sizing: border-box;
-  border: 1px solid rgb(25, 0, 255);
 }
 
 .aboutTitle {
@@ -420,8 +417,6 @@
   color: #E64500;
   line-height: 1;
   font-weight: 400;
-  border: 1px solid red;
-
 }
 
 .aboutSubtitle {
@@ -431,8 +426,6 @@
   margin-top: 0.5rem;
   font-weight: 700;
   text-align: end;
-  border: 1px solid red;
-
 }
 
 /* Container principal da Timeline (Lógica Robusta com Flexbox) */
@@ -593,6 +586,277 @@
   font-weight: 700;
   text-align: center;
 }
+
+/* =================================== */
+/* Cases Section Styles (VERSÃO CORRIGIDA) */
+/* =================================== */
+
+/* O container principal da seção */
+.casesSection {
+  background-color: #1B1B1B;
+  /* REMOVIDO padding lateral e inferior para ocupar a tela toda */
+  padding: 40px 0 0 0;
+  border: 1px solid #E64500; /* Adiciona uma borda fina ao redor da seção */
+}
+
+/* O header que contém o título-pílula */
+.casesHeader {
+  padding-bottom: 80px; /* Espaço entre o título e o grid */
+  display: flex;
+  justify-content: center;
+}
+
+/* O título "Cases" estilizado como pílula */
+.casesTitlePill {
+  padding: 12px 100px;
+  background-color: #fbeedb;
+  border: 3px solid #E64500;
+  border-radius: 9999px;
+  color: #E64500;
+  font-family: 'Cousine', monospace;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* O grid que contém os cards dos projetos */
+.casesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* GAP ajustado para um visual mais coeso como na referência */
+  gap: 30px; 
+  max-width: 100%;
+  /* REMOVIDO max-width para permitir que o grid ocupe toda a largura */
+  border: 1px solid #ff001e; /* Adiciona uma borda fina ao redor do grid */
+  padding: 0px 20px;
+}
+
+/* Cada card individual */
+.caseItem {
+  position: relative;
+  overflow: hidden;
+  display: block; /* Garante que o link se comporte como um bloco */
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+  /* REMOVEMOS height, background-size, e background-position */
+}
+
+.caseItem:hover {
+  transform: scale(1.02);
+}
+
+/* A nova classe para a tag <img> */
+.caseImage {
+  display: block; /* Remove qualquer espaçamento extra abaixo da imagem */
+  width: 100%;    /* Faz a imagem ocupar 100% da largura da coluna do grid */
+  height: auto;   /* O NAVEGADOR CALCULA A ALTURA AUTOMATICAMENTE */
+  object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+}
+
+/* Camada escura sobre a imagem para legibilidade */
+.caseItemOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(27, 27, 27, 0.80);
+  padding: 40px 20px 20px 20px;
+  color: #fff;
+  text-align: center
+}
+
+.caseItemOverlay h3 {
+  margin: 0;
+  font-family: var(--font-geist-sans);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* ================================================== */
+/* Contact Section Styles (TÉCNICA NOVA E DEFINITIVA) */
+/* ================================================== */
+
+.contactSection {
+  position: relative;
+  width: 100%;
+  background-color: #1B1B1B;
+}
+
+.contactBackgroundImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 0.8;
+}
+
+.contactContentWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 40px 80px 40px;
+  box-sizing: border-box;
+}
+
+.contactContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.speechBubble {
+  background-color: rgba(240, 240, 240, 0.9);
+  border-radius: 14px;
+  padding: 25px 30px;
+  max-width: 500px;
+  font-family: var(--font-geist-sans);
+  margin-bottom: auto;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.speechBubble p {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.speechBubble a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: underline;
+  font-family: 'Cousine', monospace;
+}
+
+.middleContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.profileImageContainer {
+  width: 400px;
+  flex-shrink: 0;
+}
+
+.profileImageContainer img {
+  width: 100%;
+  display: block;
+}
+
+/* Caixa de links com a nova técnica */
+.contactBox {
+  position: relative;
+  background-color: rgba(27, 27, 27, 0.85);
+  padding: 30px 40px;
+  font-family: 'Cousine', monospace;
+  color: #fff;
+  flex-shrink: 0;
+
+  /* Bordas em 3 lados, deixando o lado esquerdo aberto */
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  border-left: 1px solid #fff;
+}
+
+.contactBox p {
+  margin: 10px 0;
+}
+
+.contactBox p:first-child { margin-top: 0; }
+.contactBox p:last-child { margin-bottom: 0; }
+
+.contactBox a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contactBox a:hover {
+  text-decoration: underline;
+}
+
+/* A linha de conexão */
+.lineConnectorBox {
+  width: 100px;
+  height: 1px;
+  background-color: #fff;
+}
+
+/* Navegação inferior */
+.bottomNav {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 34px;
+}
+
+.backToTop {
+  font-family: 'Cousine', monospace;
+  color: #E64500;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.curriculoButton {
+  background-color: #fbeedb;
+  border-radius: 9999px;
+  padding: 10px 25px;
+  text-align: center;
+  font-family: 'Cousine', monospace;
+}
+
+.curriculoButton span {
+  display: block;
+  color: #000;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.curriculoButton a {
+  color: #555;
+  font-size: 0.8rem;
+  text-decoration: underline;
+}
+
+
+
+
+/* Ajustes Responsivos */
+@media screen and (max-width: 1024px) {
+  .casesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .casesSection {
+    padding: 20px 0 0 0;
+  }
+  .casesGrid {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+  .caseItem {
+    height: 450px;
+  }
+}
+
+
 
 /* Ajustes Responsivos */
 @media screen and (max-width: 768px) {

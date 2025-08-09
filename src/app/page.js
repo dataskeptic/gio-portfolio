@@ -30,8 +30,8 @@ const jaguaracambeData = {
   hoverTitle: "Redesign do site da ONG Jaguaracambé para melhorar navegação e engajamento."
 };
 
-// Dados para a seção da Linha do Tempo
-// Cole este array no topo do seu componente Home em page.js
+
+
 const timelineData = [
   {
     title: "UX/UI Designer - Freelancer/ ONG",
@@ -115,6 +115,26 @@ const timelineData = [
     ],
   },
 ];
+
+
+const casesData = [
+  {
+    title: "Pesquisa com usuário",
+    image: "/cases/user-research.png",
+    link: "#", 
+  },
+  {
+    title: "Styleguide: necessidades em campo",
+    image: "/cases/styleguide.png",
+    link: "#", 
+  },
+  {
+    title: "Styleguide: necessidades em campo",
+    image: "/cases/Styleguide2.png",
+    link: "#", 
+  },
+];
+
 
 
 
@@ -245,7 +265,6 @@ export default function Home() {
 
             <h3 className={styles.toolsTitle}>Ferramentas</h3>
             <div className={styles.toolsGrid}>
-              
               <img
                 src="/icons/figma.svg"
                 alt="Figma logo"
@@ -276,66 +295,129 @@ export default function Home() {
         </section>
 
         <section className={styles.aboutSection}>
-  {/* Cabeçalho "SOBRE A Designer" */}
-  <div className={styles.aboutHeader}>
-    <h2 className={styles.aboutTitle}>SOBRE</h2>
-    <p className={styles.aboutSubtitle}>A Designer</p>
-  </div>
+          <div className={styles.aboutHeader}>
+            <h2 className={styles.aboutTitle}>SOBRE</h2>
+            <p className={styles.aboutSubtitle}>A Designer</p>
+          </div>
 
-  {/* A Timeline em si */}
-  <div className={styles.timeline}>
-    {/* Este wrapper é essencial para o novo CSS funcionar corretamente */}
-    <div className={styles.timelineItemsWrapper}>
-      {timelineData.map((item, index) => (
-        <div 
-          key={index} 
-          className={`
+          <div className={styles.timeline}>
+            <div className={styles.timelineItemsWrapper}>
+              {timelineData.map((item, index) => (
+                <div
+                  key={index}
+                  className={`
             ${styles.timelineItem} 
             ${index % 2 !== 0 ? styles.left : styles.right}
-            ${index % 2 === 0 ? styles.bigCircle : ''}
+            ${index % 2 === 0 ? styles.bigCircle : ""}
           `}
-        >
-          <div className={styles.timelineContent}>
-            <h3>{item.title}</h3>
-            {item.subtitle && <h4>{item.subtitle}</h4>}
-            <ul>
-              {item.details.map((detail, i) => (
-                <li key={i}>{detail}</li>
+                >
+                  <div className={styles.timelineContent}>
+                    <h3>{item.title}</h3>
+                    {item.subtitle && <h4>{item.subtitle}</h4>}
+                    <ul>
+                      {item.details.map((detail, i) => (
+                        <li key={i}>{detail}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               ))}
-            </ul>
+            </div>
+
+            {/* Ícone final da Timeline */}
+            <div className={styles.timelineEnd}>
+              <div className={styles.timelineEndIcon}>
+                <img
+                  src="/icons/hourglass.svg"
+                  alt="Hourglass icon"
+                  className={styles.iconSvg}
+                />
+              </div>
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
+        </section>
+
+        <section className={styles.casesSection}>
+          <div className={styles.casesHeader}>
+            <div className={styles.casesTitlePill}>Cases</div>
+          </div>
+
+          <div className={styles.casesGrid}>
+            {casesData.map((caseItem, index) => (
+              <a key={index} href={caseItem.link} className={styles.caseItem}>
+                {/* A imagem agora é um elemento real */}
+                <img
+                  src={caseItem.image}
+                  alt={caseItem.title}
+                  className={styles.caseImage}
+                />
+
+                {/* O overlay continua o mesmo */}
+                <div className={styles.caseItemOverlay}>
+                  <h3>{caseItem.title}</h3>
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        {/* =================================== */}
+{/*   INÍCIO DA SEÇÃO DE CONTATO (CORRIGIDA)  */}
+{/* =================================== */}
+
+<section className={styles.contactSection}>
+  {/* A imagem de fundo agora é um elemento IMG real */}
+  <img 
+    src="/contact-background.png" 
+    alt="Fundo artístico abstrato" 
+    className={styles.contactBackgroundImage} 
+  />
+
+  {/* Wrapper para todo o conteúdo que fica sobre a imagem */}
+  <div className={styles.contactContentWrapper}>
     
-    {/* Ícone final da Timeline */}
-    <div className={styles.timelineEnd}>
-      <div className={styles.timelineEndIcon}>
-        <img 
-          src="/icons/hourglass.svg" 
-          alt="Hourglass icon" 
-          className={styles.iconSvg}
-        />
+    <div className={styles.contactContainer}>
+      {/* Balão de diálogo no topo */}
+      <div className={styles.speechBubble}>
+        <p>Hey! Quer conhecer mais sobre a trajetória de Gio Silveira?</p>
+        <a href="#">Ok, quero conhecer.</a>
+      </div>
+
+      {/* Conteúdo do meio (agora será centralizado corretamente) */}
+      <div className={styles.middleContent}>
+        <div className={styles.profileImageContainer}>
+          <img src="/profile.png" alt="Foto de perfil de Gio Silveira" />
+        </div>
+        
+        <div className={styles.lineConnectorBox}>
+          <div className={styles.lineHorizontal}></div>
+          <div className={styles.lineVertical}></div>
+        </div>
+
+        <div className={styles.contactBox}>
+          <p><strong>Linkedin:</strong> <a href="#" target="_blank" rel="noopener noreferrer">/giosilveira</a></p>
+          <p><strong>E-mail:</strong> <a href="mailto:seuemail@example.com">seuemail@example.com</a></p>
+          <p><strong>Medium:</strong> <a href="#" target="_blank" rel="noopener noreferrer">/giosilveira</a></p>
+        </div>
+      </div>
+    </div>
+
+    {/* Conteúdo inferior (links fixos) */}
+    <div className={styles.bottomNav}>
+      <a href="#top" className={styles.backToTop}>Back to top</a>
+      <div className={styles.curriculoButton}>
+        <span>Currículo</span>
+        <a href="/seu-curriculo.pdf" download>baixar</a>
       </div>
     </div>
   </div>
 </section>
 
-{/* Título "Cases" - FORA da seção da timeline */}
-<div className={styles.casesHeader}>
-  <div className={styles.casesTitlePill}>
-    Cases
-  </div>
-</div>
+{/* =================================== */}
+{/*   FIM DA SEÇÃO DE CONTATO (CORRIGIDA)   */}
+{/* =================================== */}
 
 
-
-        
-
-        <section className={styles.contact}>
-          <h2>Contact</h2>
-          
-        </section>
       </main>
     </div>
   );
