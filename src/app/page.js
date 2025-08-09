@@ -143,7 +143,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Header />
-
+      
       <main className={styles.main}>
         <section className={styles.home}>
           <div className={styles.titleContainer}>

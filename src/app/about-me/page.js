@@ -1,37 +1,45 @@
 import Image from 'next/image';
+import Header from '../components/Header'; // Importa o Header que já corrigimos
 import styles from './about-me.module.css';
-import Header from '../components/Header';
 
-// Esta é a função para a página /about-me
 export default function AboutMePage() {
   return (
-    <div className={styles.pageContainer}>
+    <div className={styles.pageWrapper}>
       <Header />
 
       <main className={styles.mainContent}>
-        {/* Seção Principal (Imagem + Texto) */}
+        
+        {/* ================================== */}
+        {/* Seção Superior (Imagem e Intro)    */}
+        {/* ================================== */}
         <section className={styles.heroSection}>
-          <div className={styles.heroImageContainer}>
+          {/* Coluna da Imagem */}
+          <div className={styles.imageContainer}>
             <Image
-              src="/profile-me.png" // Nome da sua imagem de perfil aqui
-              alt="Foto de perfil de Gio Silveira na página sobre"
-              width={600}
-              height={800}
-              className={styles.heroImage}
-              priority
+              src="/profile-me.png" // Garanta que o nome do arquivo está correto
+              alt="Foto de perfil de Gio Silveira"
+              width={500}
+              height={750}
+              className={styles.profileImage}
             />
           </div>
-          <div className={styles.heroTextContainer}>
-            <p>
-              Desenvolvo uma abordagem multidisciplinar no UX/UI Design, unindo pensamento analítico e sensibilidade visual. Minha experiência com a gestão do banco de dados arqueológicos despertou meu interesse por interfaces mais funcionais e centradas no usuário. Desde então, venho me aprofundando em UX/ UI com foco em criar experiências digitais acessíveis, intuitivas e que resolvem dores reais, balanceando usabilidade, lógica da informação e impacto social.
-            </p>
+
+          {/* Coluna do Texto Introdutório e Título */}
+          <div className={styles.introContainer}>
+            <div className={styles.introText}>
+              <p>
+                Desenvolvo uma abordagem multidisciplinar no UX/UI Design, unindo pensamento analítico e sensibilidade visual. Minha experiência com a gestão do banco de dados arqueológicos despertou meu interesse por interfaces mais funcionais e centradas no usuário. Desde então, venho me aprofundando em UX/ UI com foco em criar experiências digitais acessíveis, intuitivas e que resolvem dores reais, balanceando usabilidade, lógica da informação e impacto social.
+              </p>
+            </div>
+            <h2 className={styles.designerTitle}>A DESIGNER</h2>
           </div>
         </section>
 
-        {/* Seção "A Designer" */}
-        <section className={styles.designerSection}>
-          <h2 className={styles.designerTitle}>A DESIGNER</h2>
-          <div className={styles.designerText}>
+        {/* ================================== */}
+        {/* Seção do Artigo Principal (Abaixo) */}
+        {/* ================================== */}
+        <section className={styles.mainArticleSection}>
+          <div className={styles.mainArticle}>
             <p>
               Sou graduada em Arqueologia, com foco principal na Arqueologia Digital, especificamente no uso de bancos de dados aplicados à pesquisa arqueológica. Minha monografia - “Organizando Passados, Estruturando Futuros: Análise dos Bancos de Dados Arqueológicos no Estado do Piauí-Brasil, um Estudo de Caso de Confusões (PI)” - teve como objetivo analisar os três dos principais sistemas de bancos de dados pronunciados no estado. A partir daí, criei uma proposta própria voltada tanto à gestão de dados arqueológicos quanto à logística de campo. As principais dores se encontravam na documentação e registro dos sistemas, mas também aspectos relacionados ao design da interface e à experiência do usuário.
             </p>
@@ -46,17 +54,8 @@ export default function AboutMePage() {
             </p>
           </div>
         </section>
-      </main>
 
-      {/* Seção de Contato no Rodapé */}
-      <footer className={styles.contactFooter} style={{ backgroundImage: `url('/contact-background.jpg')` }}>
-        <h2 className={styles.contactTitle}>CONTACT ME</h2>
-        <div className={styles.contactBox}>
-          <p><strong>Linkedin:</strong></p>
-          <p><strong>E-mail:</strong></p>
-          <p><strong>Medium:</strong></p>
-        </div>
-      </footer>
+      </main>
     </div>
   );
 }

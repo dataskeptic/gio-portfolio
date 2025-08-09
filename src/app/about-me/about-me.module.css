@@ -1,169 +1,121 @@
 /* =================================== */
 /*   Estilos para a Página About Me    */
-/*         (Versão Final)              */
+/*      (Flexbox e Estrutura Final)    */
 /* =================================== */
 
-.pageContainer {
+.pageWrapper {
   background-color: #1B1B1B;
   color: #fff;
   min-height: 100vh;
 }
 
-
-/* --- Conteúdo Principal --- */
 .mainContent {
-  padding: 60px 40px;
+  /* Adiciona espaço para o header fixo e o texto central que some */
+  padding-top: 150px; 
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 100px;
+  max-width: 1400px; /* Limita a largura do conteúdo geral */
+  margin: 0 auto; /* Centraliza o conteúdo */
 }
 
-/* --- Seção Hero (Imagem + Texto) --- */
+/* Seção superior com Flexbox */
 .heroSection {
   display: flex;
-  gap: 60px;
-  align-items: flex-start;
-  max-width: 1400px;
-  margin: 0 auto;
+  justify-content: center; /* Centraliza os itens com espaço entre eles */
+  align-items: flex-start; /* Alinha os itens no topo */
+  gap: 100px; /* Espaço entre a imagem e o texto */
+  margin-bottom: 100px; /* Espaço até a próxima seção */
 }
 
-.heroImageContainer {
-  flex: 1;
-  max-width: 450px;
+.imageContainer {
+  flex: 0 0 400px; /* A imagem não cresce nem encolhe, tem base de 450px */
 }
 
-.heroImage {
-  width: 90%;
+.profileImage {
+  width: 100%;
   height: auto;
-  display: block;
 }
 
-.heroTextContainer {
-  flex: 1.5;
-  padding-top: 20px;
+/* Container do texto e título à direita */
+.introContainer {
+  display: flex;
+  flex-direction: column; /* Empilha o texto e o título */
+  flex: 1; /* Ocupa o espaço restante */
+  max-width: 520px;
+  padding-top: 46px;
+
 }
 
-.heroTextContainer p {
-  font-family: var(--font-geist-sans);
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #d1d1d1;
+.introText {
+  margin-bottom: 60px;
 }
 
-/* --- Seção "A Designer" --- */
-.designerSection {
-  padding: 120px 0;
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
+.introText p {
+  font-size: 1.3rem;
+  color: #FDF2E0;
+  font-family: Cousine;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: left;
 }
 
 .designerTitle {
   font-family: 'Breamcatcher', sans-serif;
   font-size: 10rem;
   color: #E64500;
-  margin-bottom: 60px;
   line-height: 1;
-}
-
-.designerText p {
-  font-family: var(--font-geist-sans);
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #d1d1d1;
   text-align: left;
-  margin-bottom: 25px;
+  margin-top: 48px;
 }
 
-.designerText p:last-child {
+/* Seção do artigo principal, centralizada */
+.mainArticleSection {
+  display: flex; /* Usamos flex para centralizar o artigo facilmente */
+  justify-content: center;
+}
+
+.mainArticle {
+  max-width: 900px; /* Uma largura boa e grande para o texto */
+  border-left: 2px solid #FDF2E0;
+  padding-left: 40px;
+}
+
+.mainArticle p {
+  font-size: 1.2rem;
+  color: #FDF2E0;
+  font-family: Cousine;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: left;
+  margin: 0 0 25px 0;
+}
+
+.mainArticle p:last-child {
   margin-bottom: 0;
 }
-
-/* --- Seção de Contato no Rodapé --- */
-.contactFooter {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
-  padding: 100px 80px;
-  background-size: cover;
-  background-position: center;
-  min-height: 60vh;
-}
-
-.contactTitle {
-  font-family: 'Breamcatcher', sans-serif;
-  font-size: 12rem;
-  color: #E64500;
-  line-height: 1;
-}
-
-.contactBox {
-  position: relative;
-  background-color: rgba(27, 27, 27, 0.8);
-  padding: 30px 40px;
-  font-family: 'Cousine', monospace;
-  color: #fff;
-
-  /* Bordas nos 3 lados, deixando o esquerdo aberto */
-  border-top: 1px solid #fff;
-  border-right: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-}
-
-/* Cria a parte de cima da borda esquerda */
-.contactBox::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 1px;
-  height: calc(50% - 15px); /* Metade da altura, com uma abertura de 30px */
-  background-color: #fff;
-}
-
-/* Cria a parte de baixo da borda esquerda */
-.contactBox::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 1px;
-  height: calc(50% - 15px);
-  background-color: #fff;
-}
-
-.contactBox p {
-  margin: 15px 0;
-}
-.contactBox p:first-child { margin-top: 0; }
-.contactBox p:last-child { margin-bottom: 0; }
 
 /* --- Responsividade --- */
 @media screen and (max-width: 1024px) {
   .heroSection {
-    flex-direction: column;
+    flex-direction: column; /* Empilha imagem e texto em telas menores */
     align-items: center;
+    gap: 40px;
   }
-  .contactFooter {
-    flex-direction: column;
-    text-align: center;
-    padding: 80px 40px;
-  }
-  .contactTitle {
-    font-size: 8rem;
-  }
-}
 
-@media screen and (max-width: 768px) {
-  .header {
-    padding: 20px;
+  .introContainer {
+    align-items: center;
+    text-align: center;
   }
-  .headerCenter p {
-    display: none; /* Esconde texto do meio em telas pequenas */
+  
+  .introText, .mainArticle {
+     text-align: left; /* Mantém a legibilidade do texto */
   }
+
   .designerTitle {
-    font-size: 6rem;
-  }
-  .mainContent {
-    padding: 40px 20px;
+    font-size: 8rem;
+    text-align: center;
   }
 }
