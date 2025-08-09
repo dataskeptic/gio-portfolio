@@ -1,0 +1,71 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: 10;
+}
+
+.header p {
+  margin: 0;
+  color: #FFF;
+  text-align: center;
+  font-family: Cousine;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.year {
+  font-family: var(--font-geist-sans);
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.subtitle {
+  font-family: var(--font-geist-sans);
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+  flex: 1;
+  margin: 0 2rem;
+}
+
+/* Esta é a parte central que você quer manter */
+.centerTop p {
+  margin: 0;
+  color: #FFF;
+  text-align: center;
+  font-family: Cousine;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.menuIcon {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menuIcon span {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.hidden p {
+  opacity: 0;
+  pointer-events: none; /* Impede que o texto invisível seja clicável */
+}

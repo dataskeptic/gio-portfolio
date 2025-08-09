@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import ProjectCard from "./components/ProjectCard";
+import Header from "./components/Header";
 
 const arqueoProData = {
   title: "ArqueoPro: Seu campo na palma da mão",
@@ -130,7 +131,7 @@ const casesData = [
   },
   {
     title: "Styleguide: necessidades em campo",
-    image: "/cases/Styleguide2.png",
+    image: "/cases/styleguide2.png",
     link: "#", 
   },
 ];
@@ -141,24 +142,7 @@ const casesData = [
 export default function Home() {
   return (
     <div className={styles.container}>
-      <header className={styles.header}>
-        <div className={styles.leftTop}>
-          <div className={styles.year}>
-            <p>2025</p>
-          </div>
-          <div className={styles.resume}>
-            <p>[RESUME]</p>
-          </div>
-        </div>
-        <div className={styles.centerTop}>
-          <p>UX/UI Design | Product Design | Graphic Design</p>
-        </div>
-        <div className={styles.menuIcon}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </header>
+      <Header />
 
       <main className={styles.main}>
         <section className={styles.home}>
@@ -233,7 +217,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Habilidades e Conhecimentos Section */}
         <section className={styles.skillsSection}>
           <div className={styles.skillsContent}>
             <h2 className={styles.skillsTitle}>
@@ -345,14 +328,12 @@ export default function Home() {
           <div className={styles.casesGrid}>
             {casesData.map((caseItem, index) => (
               <a key={index} href={caseItem.link} className={styles.caseItem}>
-                {/* A imagem agora é um elemento real */}
                 <img
                   src={caseItem.image}
                   alt={caseItem.title}
                   className={styles.caseImage}
                 />
 
-                {/* O overlay continua o mesmo */}
                 <div className={styles.caseItemOverlay}>
                   <h3>{caseItem.title}</h3>
                 </div>
@@ -361,63 +342,71 @@ export default function Home() {
           </div>
         </section>
 
-        {/* =================================== */}
-{/*   INÍCIO DA SEÇÃO DE CONTATO (CORRIGIDA)  */}
-{/* =================================== */}
+        <section className={styles.contactSection}>
+          <img
+            src="/contact-background.png"
+            alt="Fundo artístico abstrato"
+            className={styles.contactBackgroundImage}
+          />
 
-<section className={styles.contactSection}>
-  {/* A imagem de fundo agora é um elemento IMG real */}
-  <img 
-    src="/contact-background.png" 
-    alt="Fundo artístico abstrato" 
-    className={styles.contactBackgroundImage} 
-  />
+          <div className={styles.contactContentWrapper}>
+            <div className={styles.contactContainer}>
+              <div className={styles.speechBubble}>
+                <p>
+                  Seja Bem vindo! Quer conhecer mais sobre a trajetória de Gio Silveira?
+                </p>
+                <a href="#">Ok, quero conhecer.</a>
+              </div>
 
-  {/* Wrapper para todo o conteúdo que fica sobre a imagem */}
-  <div className={styles.contactContentWrapper}>
-    
-    <div className={styles.contactContainer}>
-      {/* Balão de diálogo no topo */}
-      <div className={styles.speechBubble}>
-        <p>Hey! Quer conhecer mais sobre a trajetória de Gio Silveira?</p>
-        <a href="#">Ok, quero conhecer.</a>
-      </div>
+              <div className={styles.middleContent}>
+                <div className={styles.profileImageContainer}>
+                  <img
+                    src="/profile.png"
+                    alt="Foto de perfil de Gio Silveira"
+                  />
+                </div>
 
-      {/* Conteúdo do meio (agora será centralizado corretamente) */}
-      <div className={styles.middleContent}>
-        <div className={styles.profileImageContainer}>
-          <img src="/profile.png" alt="Foto de perfil de Gio Silveira" />
-        </div>
-        
-        <div className={styles.lineConnectorBox}>
-          <div className={styles.lineHorizontal}></div>
-          <div className={styles.lineVertical}></div>
-        </div>
+                <div className={styles.lineConnectorBox}>
+                  <div className={styles.lineHorizontal}></div>
+                  <div className={styles.lineVertical}></div>
+                </div>
 
-        <div className={styles.contactBox}>
-          <p><strong>Linkedin:</strong> <a href="#" target="_blank" rel="noopener noreferrer">/giosilveira</a></p>
-          <p><strong>E-mail:</strong> <a href="mailto:seuemail@example.com">seuemail@example.com</a></p>
-          <p><strong>Medium:</strong> <a href="#" target="_blank" rel="noopener noreferrer">/giosilveira</a></p>
-        </div>
-      </div>
-    </div>
+                <div className={styles.contactBox}>
+                  <p>
+                    <strong>Linkedin:</strong>{" "}
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                      /giosilveira
+                    </a>
+                  </p>
+                  <p>
+                    <strong>E-mail:</strong>{" "}
+                    <a href="mailto:seuemail@example.com">
+                      seuemail@example.com
+                    </a>
+                  </p>
+                  <p>
+                    <strong>Medium:</strong>{" "}
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                      /giosilveira
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
 
-    {/* Conteúdo inferior (links fixos) */}
-    <div className={styles.bottomNav}>
-      <a href="#top" className={styles.backToTop}>Back to top</a>
-      <div className={styles.curriculoButton}>
-        <span>Currículo</span>
-        <a href="/seu-curriculo.pdf" download>baixar</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-{/* =================================== */}
-{/*   FIM DA SEÇÃO DE CONTATO (CORRIGIDA)   */}
-{/* =================================== */}
-
-
+            <div className={styles.bottomNav}>
+              <a href="#top" className={styles.backToTop}>
+                Back to top
+              </a>
+              <div className={styles.curriculoButton}>
+                <span>Currículo</span>
+                <a href="/seu-curriculo.pdf" download>
+                  baixar
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
