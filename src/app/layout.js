@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Cousine } from "next/font/google";
+import { Geist, Geist_Mono, Cousine, Anton } from "next/font/google";
 import "./globals.css";
 import localFont from 'next/font/local';
 
@@ -35,15 +35,21 @@ const cousine = Cousine({
   variable: '--font-cousine',
 });
 
+const anton = Anton({
+  subsets: ['latin'],
+  weight: ['400'], // Anton só tem o peso 400, que já é bem "bold"
+  variable: '--font-anton', // Define uma variável CSS para a fonte
+});
+
 export const metadata = {
-  title: "Portfolio", 
+  title: "Gio Silveira - UX/UI Designer", 
   description: "UX/UI Portfolio", 
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${flirtationWalk.variable} ${breamcatcher.variable} ${cousine.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${flirtationWalk.variable} ${breamcatcher.variable} ${cousine.variable} ${anton.variable}`}>
         {children}
       </body>
     </html>

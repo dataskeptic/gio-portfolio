@@ -35,9 +35,6 @@ export default function AboutMePage() {
           </div>
         </section>
 
-        {/* ================================== */}
-        {/* Seção do Artigo Principal (Abaixo) */}
-        {/* ================================== */}
         <section className={styles.mainArticleSection}>
           <div className={styles.mainArticle}>
             <p>
@@ -54,8 +51,26 @@ export default function AboutMePage() {
             </p>
           </div>
         </section>
+        </main>
 
-      </main>
+                    <footer className={styles.contactSection}>
+        <img 
+          src="contact-background2.png"
+          alt="Fundo artístico para a seção de contato"
+          className={styles.contactBackgroundImage}
+        />
+        <div className={styles.contactOverlay}>
+          <h2 className={styles.contactTitle}>CONTATE ME</h2>
+          <div className={styles.contactBox}>
+            <p><strong>Linkedin:</strong></p>
+            <p><strong>E-mail:</strong></p>
+            <p><strong>Medium:</strong></p>
+          </div>
+        </div>
+      </footer>
+
+
+      
     </div>
   );
 }

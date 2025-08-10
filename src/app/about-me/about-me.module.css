@@ -97,6 +97,91 @@
   margin-bottom: 0;
 }
 
+.contactSection {
+  position: relative;
+  width: 100%;
+}
+
+.contactBackgroundImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.contactOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0; /* O gap é zerado para o overlap funcionar bem */
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+/* CORREÇÃO DA FONTE E SOBREPOSIÇÃO */
+.contactTitle {
+font-family: 'Breamcatcher', sans-serif;
+font-size: 14rem;
+  color: #ffffff;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -0.04em; /* Deixa as letras mais próximas */
+  z-index: 2; /* Garante que o título fique sobre a caixa */
+
+  /* A MÁGICA DA SOBREPOSIÇÃO: */
+  margin-right: -20px; 
+}
+
+.contactBox {
+  border: 3px solid #fff;
+  padding: 20px 40px;
+  background-color: transparent;
+  min-width: 360px;
+  height: 240px;
+  z-index: 1; /* Garante que fique atrás do título */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start
+}
+
+.contactBox p {
+  font-family: 'Cousine', monospace;
+  font-size: 1rem;
+  color: #fff;
+  margin: 20px 0;
+}
+
+/* --- Responsividade --- */
+@media screen and (max-width: 1024px) {
+  .heroSection {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .introContainer,
+  .designerTitle {
+    text-align: center;
+  }
+  .contactOverlay {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  .contactTitle {
+    font-size: 6rem;
+    margin-right: 0; /* Remove a sobreposição em telas pequenas */
+    margin-bottom: -30px; /* Cria a sobreposição vertical */
+  }
+}
+
+
+
 /* --- Responsividade --- */
 @media screen and (max-width: 1024px) {
   .heroSection {
