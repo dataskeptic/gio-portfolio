@@ -40,21 +40,21 @@ export default function Header() {
       {isMenuOpen && (
         <div className={styles.navOverlay}>
           <Link
-            href="#home"
+            href="/#home"
             className={styles.navLink}
             onClick={handleLinkClick}
           >
             Home
           </Link>
           <Link
-            href="#experiencias"
+            href="/#experiencias"
             className={styles.navLink}
             onClick={handleLinkClick}
           >
             Experiências
           </Link>
           <Link
-            href="#projetos"
+            href="/#projetos"
             className={styles.navLink}
             onClick={handleLinkClick}
           >
