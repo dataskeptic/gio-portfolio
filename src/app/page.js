@@ -6,7 +6,8 @@ import Header from "./components/Header";
 const arqueoProData = {
   title: "ArqueoPro: Seu campo na palma da mão",
   tags: ["UX DESIGN", "UI DESIGN", "USER RESEARCH", "PRODUCT DESIGN"],
-  project_description: "Organizei a estrutura, fluxo de uso e todo o processo de design do aplicativo voltada para otimizar a coleta e gestão de dados arqueológicos em campo integrado com GPS. O aplicativo está em atual fase de implementação. Foram mapeadas e integradas no aplicativo categorias essenciais como:",
+  project_description:
+    "Organizei a estrutura, fluxo de uso e todo o processo de design do aplicativo voltada para otimizar a coleta e gestão de dados arqueológicos em campo integrado com GPS. O aplicativo está em atual fase de implementação. Foram mapeadas e integradas no aplicativo categorias essenciais como:",
   features: [
     "Formulários de coleta e registro de dados;",
     "Tags de categorização de membros de equipe;",
@@ -15,23 +16,24 @@ const arqueoProData = {
     "GPS: disponibilização de mapas, gravação de caminhamento e marcação de pontos georreferenciados.",
   ],
   image: "/arqueopro.png",
-  hoverTitle: "Solução digital para campo arqueológico: app de coleta de dados integrado com GPS."
+  hoverTitle:
+    "Solução digital para campo arqueológico: app de coleta de dados integrado com GPS.",
 };
 
 const jaguaracambeData = {
   title: "Novo de design do site da ONG Jaguaracambé (versão de 2023).",
   tags: ["UX DESIGN", "UI DESIGN", "WEB DESIGN", "LANDING PAGE"],
-  project_description: "Realizei o redesign completo do site da ONG ambientalista, com foco em melhorar a navegação, a clareza das informações e o engajamento do público com as causas e projetos da instituição. Reestruturei a hierarquia de conteúdo para tornar o acesso mais intuitivo e a experiência do usuário mais fluida, tanto em desktop quanto em dispositivos móveis. O design pode ser acessado pelo site oficial da ONG Jaguaracambé, o projeto foi entregue em 2023. As principais melhorias incluem:",
+  project_description:
+    "Realizei o redesign completo do site da ONG ambientalista, com foco em melhorar a navegação, a clareza das informações e o engajamento do público com as causas e projetos da instituição. Reestruturei a hierarquia de conteúdo para tornar o acesso mais intuitivo e a experiência do usuário mais fluida, tanto em desktop quanto em dispositivos móveis. O design pode ser acessado pelo site oficial da ONG Jaguaracambé, o projeto foi entregue em 2023. As principais melhorias incluem:",
   features: [
     "Padronização de cores, tipografia, botões, formulários e espaçamento para criar uma identidade visual coesa;",
     "Melhoria do contraste entre texto e fundo para garantir legibilidade;",
     "Criação de hierarquia visual clara com títulos, subtítulos e elementos de destaque;",
   ],
   image: "/jaguaracambe.png",
-  hoverTitle: "Redesign do site da ONG Jaguaracambé para melhorar navegação e engajamento."
+  hoverTitle:
+    "Redesign do site da ONG Jaguaracambé para melhorar navegação e engajamento.",
 };
-
-
 
 const timelineData = [
   {
@@ -67,21 +69,19 @@ const timelineData = [
       "Processo de criação, execução e montagem de materiais promocionais.",
       "Colaboração com fornecedores externos, como gráficas, para garantir que os trabalhos sejam impressos.",
       "Gerenciamento de 3 perfis de redes sociais dos empreendimentos da empresa.",
-      "Produção de vídeos e material fotográfico para a empresa.", 
+      "Produção de vídeos e material fotográfico para a empresa.",
       "Tratamento de imagens fotográficas.",
-      "Edição de vídeo.", 
-      "Criação de arte e materiais promocionais para os 3 perfis das redes sociais dos empreendimentos da empresa."      
+      "Edição de vídeo.",
+      "Criação de arte e materiais promocionais para os 3 perfis das redes sociais dos empreendimentos da empresa.",
     ],
-
-    
   },
   {
     title: "Outros Curso",
     subtitle: "Tecnólogo, UNOPAR: Arqueologia Digital e Banco de Dados",
     details: [
-        "Figma: Design Colaborativo do Básico ao Protótipo Responsivo | Udemy | 2023.",
-        "Product Design: Master Digital Product Design: UX Research e UI Design | Udemy | 2023.",
-        "Illustrator: Adobe Illustrator CC | Espaço Pixel | 2018.",
+      "Figma: Design Colaborativo do Básico ao Protótipo Responsivo | Udemy | 2023.",
+      "Product Design: Master Digital Product Design: UX Research e UI Design | Udemy | 2023.",
+      "Illustrator: Adobe Illustrator CC | Espaço Pixel | 2018.",
     ],
   },
   {
@@ -142,33 +142,29 @@ const timelineData = [
   },
 ];
 
-
 const casesData = [
   {
     title: "Pesquisa com usuário",
     image: "/cases/user-research.png",
-    link: "#", 
+    link: "#",
   },
   {
     title: "Styleguide: necessidades em campo",
     image: "/cases/styleguide.png",
-    link: "#", 
+    link: "#",
   },
   {
     title: "Styleguide: necessidades em campo",
     image: "/cases/styleguide2.png",
-    link: "#", 
+    link: "#",
   },
 ];
-
-
-
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Header />
-      
+
       <main className={styles.main}>
         <section className={styles.home}>
           <div className={styles.titleContainer}>
@@ -204,7 +200,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={styles.projects}>
+        <section id="projetos" className={styles.projects}>
           <div className={styles.portfolioHeaderContainer}>
             <div className={styles.contentWrapper}>
               <div className={styles.portfolioPill}>
@@ -312,7 +308,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={styles.aboutSection}>
+        <section id="experiencias" className={styles.aboutSection}>
           <div className={styles.aboutHeader}>
             <h2 className={styles.aboutTitle}>SOBRE</h2>
             <p className={styles.aboutSubtitle}>A Designer</p>
@@ -392,7 +388,8 @@ export default function Home() {
             <div className={styles.contactContainer}>
               <div className={styles.speechBubble}>
                 <p>
-                  Seja Bem vindo! Quer conhecer mais sobre a trajetória de Gio Silveira?
+                  Seja Bem vindo! Quer conhecer mais sobre a trajetória de Gio
+                  Silveira?
                 </p>
                 <a href="#">Ok, quero conhecer.</a>
               </div>

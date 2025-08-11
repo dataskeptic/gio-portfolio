@@ -1,10 +1,12 @@
 "use client"; // Necessário para usar hooks como useState e useEffect
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import styles from './Header.module.css';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,25 +27,49 @@ export default function Header() {
     };
   }, []); // O array vazio [] garante que este efeito rode apenas uma vez
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
-    <header className={styles.header}>
-      <div className={styles.headerLeft}>
-        <p className={styles.year}>2025</p>
-        <p>[RESUME]</p>
-      </div>
-
-      {/* Adicionamos uma classe condicional aqui */}
-      <div className={`${styles.centerTop} ${isScrolled ? styles.hidden : ''}`}>
-        <p>UX/UI Design | Product Design | Graphic Design</p>
-      </div>
-
-      <div className={styles.headerRight}>
-        <div className={styles.menuIcon}>
-          <span></span>
-          <span></span>
-          <span></span>
+    <>
+      <header className={styles.header}>
+        <div className={styles.headerLeft}>
+          <p className={styles.year}>2025</p>
+          <p>[RESUME]</p>
         </div>
-      </div>
-    </header>
+
+        {/* Adicionamos uma classe condicional aqui */}
+        <div className={`${styles.centerTop} ${isScrolled ? styles.hidden : ''}`}>
+          <p>UX/UI Design | Product Design | Graphic Design</p>
+        </div>
+
+        <div className={styles.headerRight}>
+          <div 
+            className={`${styles.menuIcon} ${isMenuOpen ? styles.open : ''}`}
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+            role="button"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </header>
+
+      {isMenuOpen && (
+        <nav className={styles.navOverlay}>
+          <Link href="/" className={styles.navLink} onClick={handleLinkClick}>Home</Link>
+          <Link href="/#experiencias" className={styles.navLink} onClick={handleLinkClick}>Experiências</Link>
+          <Link href="/#projetos" className={styles.navLink} onClick={handleLinkClick}>Projetos</Link>
+          <Link href="/about-me" className={styles.navLink} onClick={handleLinkClick}>Sobre mim</Link>
+        </nav>
+      )}
+    </>
   );
 }
