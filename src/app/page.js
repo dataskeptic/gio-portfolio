@@ -36,83 +36,108 @@ const jaguaracambeData = {
 const timelineData = [
   {
     title: "UX/UI Designer - Freelancer/ ONG",
-    subtitle: "Jaguaracambé",
+    subtitle: "Jaguaracambé | 2023 - 2 meses",
     details: [
-      "UX/UI Design",
-      "Product Design",
-      "Fluxos de Usuário",
-      "Wireframes",
-      "Prototipagem",
-      "Teste de Usabilidade",
-      "Design de Landing Page",
+      "UX/UI Design.",
+      "Product Design.",
+      "Fluxos de Usuário.",
+      "Wireframes.",
+      "Prototipagem.",
+      "Teste de Usabilidade.",
+      "Design de Landing Page.",
     ],
   },
   {
     title: "Superior - Design Gráfico",
-    subtitle: "Tecnólogo, UNOPAR",
+    subtitle: "Tecnólogo, UNOPAR | 2022 - 2023",
     details: [
-      "Criação de projetos de comunicação visual e design;",
-      "Elaboração e avaliação técnica de projetos;",
-      "Gestão e planejamento de projetos gráficos;",
-      "Métodos e processos de criação em ilustração e design;",
+      "Criação de projetos de comunicação visual e design.",
+      "Elaboração e avaliação técnica de projetos.",
+      "Gestão e planejamento de projetos gráficos.",
+      "Métodos e processos de criação em ilustração e design.",
     ],
   },
   {
-    title: "Designer Gráfico - Boon Agência de Marketing",
-    subtitle: "",
+    title: "Estágio - Design Gráfico",
+    subtitle: "PSL Empreendimentos | 2023 - 3 meses",
     details: [
-      "Layouts criativos: posts, banners, stories e anúncios, focando em engajamento e identidade visual;",
-      "Adequação de peças para diferentes redes sociais;",
-      "Design de materiais institucionais e promocionais impressos;",
+      "Criação de materiais de marketing, propaganda e demais materiais gráficos (gráficos e digitais como banners, folders e artes para TV).",
+      "Desenvolvimento e execução estratégias de tráfego pago.",
+      "Criação de layouts e designs para apresentações corporativas.",
+      "Processo de criação, execução e montagem de materiais promocionais.",
+      "Colaboração com fornecedores externos, como gráficas, para garantir que os trabalhos sejam impressos.",
+      "Gerenciamento de 3 perfis de redes sociais dos empreendimentos da empresa.",
+      "Produção de vídeos e material fotográfico para a empresa.", 
+      "Tratamento de imagens fotográficas.",
+      "Edição de vídeo.", 
+      "Criação de arte e materiais promocionais para os 3 perfis das redes sociais dos empreendimentos da empresa."      
+    ],
+
+    
+  },
+  {
+    title: "Outros Curso",
+    subtitle: "Tecnólogo, UNOPAR: Arqueologia Digital e Banco de Dados",
+    details: [
+        "Figma: Design Colaborativo do Básico ao Protótipo Responsivo | Udemy | 2023.",
+        "Product Design: Master Digital Product Design: UX Research e UI Design | Udemy | 2023.",
+        "Illustrator: Adobe Illustrator CC | Espaço Pixel | 2018.",
+    ],
+  },
+  {
+    title: "Designer Gráfico",
+    subtitle: "Boom Agência de Marketing | 2024 - 3 meses",
+    details: [
+      "Layouts criativos: posts, banners, stories e anúncios, focando em engajamento e identidade visual.",
+      "Adequação de peças para diferentes redes sociais.",
+      "Design de materiais institucionais e promocionais impressos.",
     ],
   },
   {
     title: "Programa UX Unicórnio",
-    subtitle: "Leandro Rezende",
+    subtitle: "Leandro Rezende | 2024 - 2025",
     details: [
-      "Formação em UX, UI e Product Design",
-      "Pesquisa de experiência de usuário",
-      "UX Research e UX Strategy",
-      "Design de Interfaces",
-      "Mapeamento de Jornada",
-      "UX em ambientes ágeis",
-      "Interação homem-máquina",
-      "Figma",
+      "Formação em UX, UI e Product Design.",
+      "Pesquisa de experiência de usuário.",
+      "UX Research e UX Strategy.",
+      "Design de Interfaces.",
+      "Mapeamento de Jornada.",
+      "UX em ambientes ágeis.",
+      "Interação homem-máquina.",
+      "Figma.",
     ],
   },
   {
-    title: "Designer Instrucional - FADEX/ Projeto SEDUC TEC",
-    subtitle: "",
+    title: "Designer Instrucional",
+    subtitle: "FADEX/ Projeto SEDUC TEC | 2024 - 2025; 1 ano 7 meses",
     details: [
-      "Estruturação de roteiros para edição de aulas técnicas para o Ensino Médio;",
-      "Desenvolvimento e conteúdos de aprendizagem: materiais didáticos como textos, roteiros para vídeos, design de cenas e avaliações e recursos multimídia;",
+      "Estruturação de roteiros para edição de aulas técnicas para o Ensino Médio.",
+      "Desenvolvimento e conteúdos de aprendizagem: materiais didáticos como textos, roteiros para vídeos, design de cenas e avaliações e recursos multimídia.",
     ],
   },
   {
-    title: "Outro Curso",
-    subtitle: "Tecnólogo, UNOPAR: Arqueologia Digital e Banco de Dados",
+    title: "Superior em Arqueologia",
+    subtitle: "UFPI | 2019 - 2025",
     details: [
-        "Elaboração e avaliação técnica de projetos;",
-        "Gestão e planejamento de projetos gráficos;",
-        "Métodos e processos de criação em ilustração e design;",
+      "Superior em Arqueologia, com maior ênfase de estudos em Arqueologia Digital e Banco de Dados. A monografia teve como foco a análise de bancos de dados arqueológicos e a proposta de modelagem para bancos de dados voltados às necessidades arqueológicas e logísticas. O produto proposto está em fase de implementação.",
     ],
   },
   {
-    title: "UX/UI Designer - Freelancer/ ArqueoPro",
-    subtitle: "",
+    title: "UX/UI Designer",
+    subtitle: "Freelancer/ ArqueoPro | 2025 - 6 meses",
     details: [
-      "UX/UI Design",
-      "Product Design",
-      "Arquitetura da Informação",
-      "Pesquisa com usuários",
-      "Fluxos de uso",
-      "Wireframing",
-      "Prototipagem",
-      "Testes de usabilidade",
-      "Style Guide",
-      "Design Gráfico",
-      "Mobile First",
-      "Levantamento de requisitos",
+      "UX/UI Design.",
+      "Product Design.",
+      "Arquitetura da Informação.",
+      "Pesquisa com usuários.",
+      "Fluxos de uso.",
+      "Wireframing.",
+      "Prototipagem.",
+      "Testes de usabilidade.",
+      "Style Guide.",
+      "Design Gráfico.",
+      "Mobile First.",
+      "Levantamento de requisitos.",
     ],
   },
 ];
@@ -340,10 +365,12 @@ export default function Home() {
           <div className={styles.casesGrid}>
             {casesData.map((caseItem, index) => (
               <a key={index} href={caseItem.link} className={styles.caseItem}>
-                <img
+                <Image
                   src={caseItem.image}
                   alt={caseItem.title}
                   className={styles.caseImage}
+                  width={500} // Add appropriate width
+                  height={500} // Add appropriate height
                 />
 
                 <div className={styles.caseItemOverlay}>
