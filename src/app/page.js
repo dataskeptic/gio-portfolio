@@ -2,6 +2,8 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import ProjectCard from "./components/ProjectCard";
 import Header from "./components/Header";
+import Link from "next/link";
+
 
 const arqueoProData = {
   title: "ArqueoPro: Seu campo na palma da mão",
@@ -16,10 +18,10 @@ const arqueoProData = {
     "GPS: disponibilização de mapas, gravação de caminhamento e marcação de pontos georreferenciados.",
   ],
   image: "/arqueopro.png",
+  link: "https://medium.com/@giosilvdsign/arqueopro-solu%C3%A7%C3%A3o-integrada-de-coleta-e-armazenamento-de-dados-arqueol%C3%B3gicos-e-gps-em-aplicativo-3b297ccb0d12",
   hoverTitle:
     "Solução digital para campo arqueológico: app de coleta de dados integrado com GPS.",
 };
-
 const jaguaracambeData = {
   title: "Novo de design do site da ONG Jaguaracambé (versão de 2023).",
   tags: ["UX DESIGN", "UI DESIGN", "WEB DESIGN", "LANDING PAGE"],
@@ -31,8 +33,9 @@ const jaguaracambeData = {
     "Criação de hierarquia visual clara com títulos, subtítulos e elementos de destaque;",
   ],
   image: "/jaguaracambe.png",
+  link: "https://medium.com/@giosilvdsign/novo-site-para-a-ong-jaguaracamb%C3%A9-design-de-2023-80e6dc466f8c",
   hoverTitle:
-    "Redesign do site da ONG Jaguaracambé para melhorar navegação e engajamento.",
+    "Redesign do site da ONG Jaguaracambé para melhorar navegação e engajamento."
 };
 
 const timelineData = [
@@ -146,17 +149,17 @@ const casesData = [
   {
     title: "Pesquisa com usuário",
     image: "/cases/user-research.png",
-    link: "#",
+    link: "https://medium.com/@giosilvdsign/arqueopro-pesquisas-com-usu%C3%A1rio-ddf2573d0c4e",
   },
   {
     title: "Styleguide: necessidades em campo",
     image: "/cases/styleguide.png",
-    link: "#",
+    link: "https://medium.com/@giosilvdsign/arqueopro-superando-desafios-do-sol-forte-no-trabalho-de-campo-arqueol%C3%B3gico-para-a-coleta-de-dados-e61b54a2b82a",
   },
   {
     title: "Styleguide: necessidades em campo",
     image: "/cases/styleguide2.png",
-    link: "#",
+    link: "https://medium.com/@giosilvdsign/design-e-design-patterns-em-banco-de-dados-arqueol%C3%B3gicos-an%C3%A1lise-e-proposta-de-modelagem-4a3ed12a4174",
   },
 ];
 
@@ -225,6 +228,7 @@ export default function Home() {
               features={arqueoProData.features}
               image={arqueoProData.image}
               hoverTitle={arqueoProData.hoverTitle}
+              link={arqueoProData.link}
             />
 
             <ProjectCard
@@ -234,6 +238,7 @@ export default function Home() {
               features={jaguaracambeData.features}
               image={jaguaracambeData.image}
               hoverTitle={jaguaracambeData.hoverTitle}
+              link={jaguaracambeData.link}
             />
           </div>
         </section>
@@ -391,7 +396,7 @@ export default function Home() {
                   Seja Bem vindo! Quer conhecer mais sobre a trajetória de Gio
                   Silveira?
                 </p>
-                <a href="#">Ok, quero conhecer.</a>
+                <Link href="/about-me">Ok, quero conhecer.</Link>
               </div>
 
               <div className={styles.middleContent}>
@@ -410,20 +415,20 @@ export default function Home() {
                 <div className={styles.contactBox}>
                   <p>
                     <strong>Linkedin:</strong>{" "}
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                      /giosilveira
+                    <a href="https://www.linkedin.com/in/giovanna-silveira-a34662261/" target="_blank" rel="noopener noreferrer">
+                      /Giovana Silveira
                     </a>
                   </p>
                   <p>
                     <strong>E-mail:</strong>{" "}
-                    <a href="mailto:seuemail@example.com">
-                      seuemail@example.com
+                    <a href="mailto:giosilvdsign@gmail.com">
+                      giosilvdsign@gmail.com
                     </a>
                   </p>
                   <p>
                     <strong>Medium:</strong>{" "}
-                    <a href="#" target="_blank" rel="noopener noreferrer">
-                      /giosilveira
+                    <a href="https://medium.com/@giosilvdsign" target="_blank" rel="noopener noreferrer">
+                      @giosilvdsign
                     </a>
                   </p>
                 </div>

@@ -99,13 +99,28 @@ export default function AboutMePage() {
           <h2 className={styles.contactTitle}>CONTATE ME</h2>
           <div className={styles.contactBox}>
             <p>
-              <strong>Linkedin:</strong>
+              <strong>Linkedin:</strong>{" "}
+              <a
+                href="https://www.linkedin.com/in/giovanna-silveira-a34662261/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                /Giovana Silveira
+              </a>
             </p>
             <p>
-              <strong>E-mail:</strong>
+              <strong>E-mail:</strong>{" "}
+              <a href="mailto:giosilvdsign@gmail.com">giosilvdsign@gmail.com</a>
             </p>
             <p>
-              <strong>Medium:</strong>
+              <strong>Medium:</strong>{" "}
+              <a
+                href="https://medium.com/@giosilvdsign"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                @giosilvdsign
+              </a>
             </p>
           </div>
         </div>

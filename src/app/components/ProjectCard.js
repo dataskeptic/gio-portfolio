@@ -7,7 +7,8 @@ const ProjectCard = ({
   description,
   features,
   image,
-  hoverTitle
+  hoverTitle,
+  link
 }) => {
   return (
     <div className={styles.projectCard}>
@@ -40,7 +41,9 @@ const ProjectCard = ({
         {/* The content that appears over the image on hover */}
         <div className={styles.hoverContent}>
           <h3>{hoverTitle}</h3>
-          <button className={styles.readButton}>Leia</button>
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            <button className={styles.readButton}>Leia</button>
+          </a>
         </div>
       </div>
     </div>
