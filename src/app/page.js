@@ -188,8 +188,8 @@ export default function Home() {
               <div className={styles.lineConnector}></div>
               <div className={styles.quoteContainer}>
                 <p>
-                  "The secret to successful product design is <br />
-                  understanding what the real problem is."
+                  &quot;The secret to successful product design is <br />
+                  understanding what the real problem is.&quot;
                 </p>
                 <span>– Don Norm</span>
               </div>
@@ -248,30 +248,40 @@ export default function Home() {
 
             <h3 className={styles.toolsTitle}>Ferramentas</h3>
             <div className={styles.toolsGrid}>
-              <img
+              <Image
                 src="/icons/figma.svg"
                 alt="Figma logo"
                 className={styles.toolIcon}
+                width={64}
+                height={64}
               />
-              <img
+              <Image
                 src="/icons/illustrator.png"
                 alt="Adobe Illustrator logo"
                 className={styles.toolIcon}
+                width={64}
+                height={64}
               />
-              <img
+              <Image
                 src="/icons/photoshop.png"
                 alt="Adobe Photoshop logo"
                 className={styles.toolIcon}
+                width={64}
+                height={64}
               />
-              <img
+              <Image
                 src="/icons/maze.svg"
                 alt="Maze logo"
                 className={styles.toolIcon}
+                width={64}
+                height={64}
               />
-              <img
+              <Image
                 src="/icons/webflow.svg"
                 alt="Webflow logo"
                 className={styles.toolIcon}
+                width={64}
+                height={64}
               />
             </div>
           </div>
@@ -310,10 +320,12 @@ export default function Home() {
             {/* Ícone final da Timeline */}
             <div className={styles.timelineEnd}>
               <div className={styles.timelineEndIcon}>
-                <img
+                <Image
                   src="/icons/hourglass.svg"
                   alt="Hourglass icon"
                   className={styles.iconSvg}
+                  width={40}
+                  height={40}
                 />
               </div>
             </div>

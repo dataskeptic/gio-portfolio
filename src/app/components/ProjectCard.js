@@ -13,7 +13,7 @@ const ProjectCard = ({
     <div className={styles.projectCard}>
       {/* The text content, which will fade out on hover */}
       <div className={styles.textContent}>
-        <h2 className={styles.title}>"{title}"</h2>
+        <h2 className={styles.title}>&quot;{title}&quot;</h2>
         <div className={styles.tags}>
           {tags.map((tag, index) => (
             <span key={index} className={styles.tag}>{tag}</span>
