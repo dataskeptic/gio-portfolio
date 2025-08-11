@@ -246,24 +246,24 @@ export default function Home() {
             <ul className={styles.skillsList}>
               <li>
                 UX/UI Design para sites e aplicativos (experiência prática em
-                processos completos)
+                processos completos).
               </li>
-              <li>Realização de pesquisas</li>
-              <li>Prototipação</li>
-              <li>Design Gráfico</li>
-              <li>Noções de HTML e CSS</li>
+              <li>Realização de pesquisas.</li>
+              <li>Prototipação.</li>
+              <li>Design Gráfico.</li>
+              <li>Noções de HTML e CSS.</li>
               <li>
                 Design Instrucional: atuação no desenvolvimento de projetos
-                educacionais digitais
+                educacionais digitais.
               </li>
-              <li>Criação de sites WordPress com Elementor</li>
+              <li>Criação de sites WordPress com Elementor.</li>
               <li>
                 Atualizada nas principais diretrizes, boas práticas e tendências
-                de design digital
+                de design digital.
               </li>
               <li>
                 Facilidade em seguir cronogramas, com comprometimento e paixão
-                pelo que faço
+                pelo que faço.
               </li>
             </ul>
 
