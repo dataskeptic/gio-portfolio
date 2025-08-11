@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Cousine, Anton } from "next/font/google";
+import { Geist, Geist_Mono, Cousine, Anton, Reddit_Sans } from "next/font/google";
 import "./globals.css";
 import localFont from 'next/font/local';
 
@@ -41,15 +41,22 @@ const anton = Anton({
   variable: '--font-anton', // Define uma variável CSS para a fonte
 });
 
+const redditSans = Reddit_Sans({
+  subsets: ['latin'],
+  weight: ['400','500', '600', '700', '800'], // Add the weights you use in your CSS
+  variable: '--font-reddit-sans',
+});
+
 export const metadata = {
   title: "Gio Silveira - UX/UI Designer", 
-  description: "UX/UI Portfolio", 
+  description: "UX/UI Portfolio",
 };
+
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${flirtationWalk.variable} ${breamcatcher.variable} ${cousine.variable} ${anton.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${flirtationWalk.variable} ${breamcatcher.variable} ${cousine.variable} ${anton.variable} ${redditSans.variable}`}>
         {children}
       </body>
     </html>

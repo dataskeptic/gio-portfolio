@@ -281,12 +281,12 @@
   border-radius: 0px;
  
   width: 50%;
-  font-family: var(--font-geist-sans);
+  font-family: var(--font-reddit-sans);
 }
 
 .skillsTitle {
   color: #0D0D0D;
-  font-family: "Reddit Sans";
+  font-family: var(--font-reddit-sans);
   font-size: 2rem;
   font-style: normal;
   font-weight: 800;
@@ -306,7 +306,7 @@
   margin-bottom: 1rem;
   font-size: 1rem;
   color: #0D0D0D;
-  font-family: "Reddit Sans";
+  font-family: var(--font-reddit-sans);
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -325,7 +325,7 @@
 
 .toolsTitle {
   color: #0D0D0D;
-  font-family: "Reddit Sans";
+  font-family: var(--font-reddit-sans);
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 800;

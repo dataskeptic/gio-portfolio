@@ -61,7 +61,7 @@ export default function Header() {
             Projetos
           </Link>
           <Link
-            href="#sobre"
+            href="/about-me"
             className={styles.navLink}
             onClick={handleLinkClick}
           >
