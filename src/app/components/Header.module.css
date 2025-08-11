@@ -7,7 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  z-index: 10;
+  z-index: 1001;
 }
 
 .header p {

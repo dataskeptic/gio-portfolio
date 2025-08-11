@@ -37,6 +37,39 @@ export default function Header() {
 
   return (
     <>
+      {isMenuOpen && (
+        <div className={styles.navOverlay}>
+          <Link
+            href="#home"
+            className={styles.navLink}
+            onClick={handleLinkClick}
+          >
+            Home
+          </Link>
+          <Link
+            href="#experiencias"
+            className={styles.navLink}
+            onClick={handleLinkClick}
+          >
+            Experiências
+          </Link>
+          <Link
+            href="#projetos"
+            className={styles.navLink}
+            onClick={handleLinkClick}
+          >
+            Projetos
+          </Link>
+          <Link
+            href="#sobre"
+            className={styles.navLink}
+            onClick={handleLinkClick}
+          >
+            Sobre mim
+          </Link>
+        </div>
+      )}
+
       <header className={styles.header}>
         <div className={styles.headerLeft}>
           <p className={styles.year}>2025</p>
@@ -44,16 +77,16 @@ export default function Header() {
         </div>
 
         {/* Adicionamos uma classe condicional aqui */}
-        <div className={`${styles.centerTop} ${isScrolled ? styles.hidden : ''}`}>
+        <div
+          className={`${styles.centerTop} ${isScrolled ? styles.hidden : ""}`}
+        >
           <p>UX/UI Design | Product Design | Graphic Design</p>
         </div>
 
         <div className={styles.headerRight}>
-          <div 
-            className={`${styles.menuIcon} ${isMenuOpen ? styles.open : ''}`}
+          <div
+            className={`${styles.menuIcon} ${isMenuOpen ? styles.open : ""}`}
             onClick={toggleMenu}
-            aria-label="Toggle menu"
-            role="button"
           >
             <span></span>
             <span></span>
@@ -61,15 +94,6 @@ export default function Header() {
           </div>
         </div>
       </header>
-
-      {isMenuOpen && (
-        <nav className={styles.navOverlay}>
-          <Link href="/" className={styles.navLink} onClick={handleLinkClick}>Home</Link>
-          <Link href="/#experiencias" className={styles.navLink} onClick={handleLinkClick}>Experiências</Link>
-          <Link href="/#projetos" className={styles.navLink} onClick={handleLinkClick}>Projetos</Link>
-          <Link href="/about-me" className={styles.navLink} onClick={handleLinkClick}>Sobre mim</Link>
-        </nav>
-      )}
     </>
   );
 }
