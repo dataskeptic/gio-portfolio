@@ -27,14 +27,8 @@ export default function AboutMePage() {
           <div className={styles.introContainer}>
             <div className={styles.introText}>
               <p>
-                Desenvolvo uma abordagem multidisciplinar no UX/UI Design,
-                unindo pensamento analítico e sensibilidade visual. Minha
-                experiência com a gestão do banco de dados arqueológicos
-                despertou meu interesse por interfaces mais funcionais e
-                centradas no usuário. Desde então, venho me aprofundando em UX/
-                UI com foco em criar experiências digitais acessíveis,
-                intuitivas e que resolvem dores reais, balanceando usabilidade,
-                lógica da informação e impacto social.
+                Desenvolvo uma abordagem multidisciplinar no UX/UI Design, unindo pensamento analítico e sensibilidade visual. Minha experiência com sistemas de banco de dados arqueológicos despertou meu interesse por interfaces mais funcionais e centradas no usuário.
+                Desde então, venho me aprofundando em UX/UI com foco em criar experiências digitais acessíveis, intuitivas e que entreguem valor real, equilibrando usabilidade, lógica da informação e impacto social.
               </p>
             </div>
             <h2 className={styles.designerTitle}>A DESIGNER</h2>
@@ -44,46 +38,16 @@ export default function AboutMePage() {
         <section className={styles.mainArticleSection}>
           <div className={styles.mainArticle}>
             <p>
-              Sou graduada em Arqueologia, com foco principal na Arqueologia
-              Digital, especificamente no uso de bancos de dados aplicados à
-              pesquisa arqueológica. Minha monografia - “Organizando Passados,
-              Estruturando Futuros: Análise dos Bancos de Dados Arqueológicos no
-              Estado do Piauí-Brasil, um Estudo de Caso de Confusões (PI)” -
-              teve como objetivo analisar os três dos principais sistemas de
-              bancos de dados pronunciados no estado. A partir daí, criei uma
-              proposta própria voltada tanto à gestão de dados arqueológicos
-              quanto à logística de campo. As principais dores se encontravam na
-              documentação e registro dos sistemas, mas também aspectos
-              relacionados ao design da interface e à experiência do usuário.
+              Sou graduada em Arqueologia, com foco principal na Arqueologia Digital, especialmente no uso de bancos de dados aplicados à pesquisa arqueológica. Minha monografia — “Escavando o Passado, Estruturando o Futuro: Análise dos Bancos de Dados Arqueológicos e Proposta de Modelagem para a Serra das Confusões (PI)” — teve como objetivo analisar três dos principais sistemas de bancos de dados arqueológicos em uso no Brasil e propor uma modelagem própria voltada tanto à gestão de dados arqueológicos quanto à logística de campo. No trabalho, explorei não apenas a estruturação técnica desses sistemas, mas também aspectos relacionados ao design da interface e à experiência do usuário. 
             </p>
             <p>
-              Durante a graduação, percebi que não me identificava com a prática
-              tradicional da Arqueologia, principalmente em seus rituais.
-              Cheguei a concluir um tecnólogo em design gráfico - uma área que
-              sempre me interessou, mas que até então não havia tido a
-              oportunidade de explorar. Foi aí que pude conhecer o universo do
-              UX/UI Design, pelo qual me encantei e venho me aprofundando desde
-              então.
+              Durante a graduação, percebi que não me identificava com a prática profissional tradicional da arqueologia. Isso me levou a iniciar e concluir um tecnólogo em Design Gráfico — uma área que sempre me interessou, mas que até então não havia tido a oportunidade de explorar. Nesse processo, conheci o universo do UX/UI Design, pelo qual me encantei e venho me aprofundando desde então.  
             </p>
             <p>
-              Acredito que minha formação multidisciplinar me permite trazer uma
-              perspectiva única para o design de produtos digitais. A
-              Arqueologia me ensinou a lidar com grandes volumes de dados, a
-              estruturar informações de forma lógica e a pensar em sistemas
-              duráveis para o registro, acesso e preservação do conhecimento -
-              habilidades fundamentais na criação de produtos digitais
-              organizados e de usabilidade visual. Já o design gráfico me
-              proporcionou domínio sobre aspectos visuais e comunicacionais,
-              essenciais para criar interfaces intuitivas, desejáveis e
-              esteticamente agradáveis.
+              Acredito que minha formação multidisciplinar me permite trazer uma perspectiva rica e diferenciada para o UX/UI Design. A vivência em Arqueologia me ensinou a lidar com grandes volumes de dados, a estruturar informações de forma lógica e a pensar em sistemas voltados à documentação, acesso e preservação do conhecimento — habilidades fundamentais na criação de produtos digitais funcionais e centrados no usuário. Já o Design Gráfico me proporcionou domínio sobre aspectos visuais e comunicacionais, essenciais para criar interfaces intuitivas, acessíveis e esteticamente agradáveis. 
             </p>
             <p>
-              Hoje, sigo estudando e me aperfeiçoando constantemente em UX/UI,
-              com foco em compreender melhor os usuários, mapear suas jornadas,
-              propor soluções eficazes e testar hipóteses. Meu objetivo, que
-              também é o que orienta a minha intenção, é continuar contribuindo
-              para projetos que valorizem tanto a usabilidade quanto o impacto
-              social e cultural do design.
+              Hoje, sigo estudando e me aperfeiçoando constantemente em UX/UI, com foco em compreender melhor os usuários, mapear suas jornadas, propor soluções eficientes e criar experiências digitais que realmente façam sentido. Minha intenção é continuar contribuindo para projetos que valorizem tanto a usabilidade quanto o impacto social e cultural do design.
             </p>
           </div>
         </section>

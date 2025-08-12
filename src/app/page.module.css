@@ -5,7 +5,6 @@
   position: relative;
 }
 
-
 .main {
   padding: 0;
 }
@@ -71,13 +70,96 @@
   margin: 0;
 }
 
-
 .navigation {
   display: flex;
   gap: 4rem;
   margin-bottom: 4rem;
-  align-items: center;  width: 50%;
+  align-items: center;  
+  width: 50%;
   justify-content: space-between
+}
+
+.subTitle {
+  font-family: var(--font-geist-sans);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ffffff;
+  text-align: start;
+  margin-left: 20rem;
+  width: 100%;
+}
+
+.subTitleContainer {
+  width: 100%;
+  margin-top: -2rem;
+}
+
+.subTitleContainer p {
+  color: #FFF;
+  font-family: Cousine;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media (max-width: 768px) {
+  /* Centraliza o conteúdo da home e adiciona respiro */
+  .home {
+    padding: 1rem;
+    align-items: center; /* Centraliza todo o conteúdo horizontalmente */
+    text-align: center; /* Garante que o texto dentro dos blocos fique centralizado */
+  }
+
+  /* Alinha o container do título no centro */
+  .mainTitle {
+    align-items: center;
+    padding-top: 0vh;
+  }
+
+  /* AJUSTE CRÍTICO: Reduz drasticamente a fonte para caber na tela */
+  .flirtation {
+    font-size: 6.5rem; 
+  }
+  .breamcatcher {
+    font-size: 6.4rem;
+  }
+  
+  /* Ajusta a sobreposição das linhas para a nova fonte menor */
+  .firstLine {
+     margin-bottom: -1.5rem; 
+  }
+
+  /* REMOVE a margem fixa que quebra o layout no mobile */
+  .secondLine {
+    margin-left: 0; 
+  }
+
+  /* Organiza os botões em coluna e centralizados */
+  .navigation {
+    
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    width: 80%; /* Ocupa a largura toda para centralizar corretamente */
+  }
+
+  /* REMOVE a margem fixa do subtítulo e ajusta o texto */
+  .subTitle {
+    margin-left: 0;
+    text-align: center; /* Centraliza o texto do parágrafo */
+    max-width: 90%; /* Evita que o texto encoste nas bordas */
+    font-size: 0.875rem;
+    margin-left: 0rem;
+  }
+
+  /* Remove o container que pode estar causando problemas de alinhamento */
+  .subTitleContainer {
+    width: auto;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
 }
 
 .portfolioBtn,
@@ -116,70 +198,14 @@
   display: inline-block;
 }
 
-.subTitle {
-  font-family: var(--font-geist-sans);
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #ffffff;
-  text-align: start;
-  margin-left: 20rem;
-  width: 100%;
-}
 
-.subTitleContainer {
-  width: 100%;
-  margin-top: -2rem;
-}
-
-.subTitleContainer p {
-  color: #FFF;
+.projects h2 {
   font-family: Cousine;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-
-.about,
-.contact {
-  padding: 4rem 2rem;
-  min-height: 50vh;
-}
-
-.about h2,
-.projects h2,
-.contact h2 {
-  font-family: var(--font-geist-sans);
   font-size: 2rem;
   margin-bottom: 2rem;
   color: #E64500;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .mainTitle {
-    font-size: 8rem;
-  }
-  
-  .header {
-    padding: 1rem;
-  }
-  
-  .subtitle {
-    font-size: 0.75rem;
-    margin: 0 1rem;
-  }
-  
-  .navigation {
-    gap: 2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .subTitle {
-    font-size: 0.875rem;
-    padding: 0 1rem;
-  }
-}
 
 .portfolioHeaderContainer {
   display: flex;
@@ -257,11 +283,9 @@
   width: 100%;
   align-items: flex-end; /* Default alignment to the right */
   padding: 0 0 0 0;
-  
   box-sizing: border-box;
 }
 
-/* Target the second (even) project card and align it to the start */
 .projectCardsContainer > *:nth-child(even) {
   align-self: flex-start;
 }
@@ -802,58 +826,3 @@
 }
 
 
-
-
-/* Ajustes Responsivos */
-@media screen and (max-width: 1024px) {
-  .casesGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .casesSection {
-    padding: 20px 0 0 0;
-  }
-  .casesGrid {
-    grid-template-columns: 1fr;
-    gap: 5px;
-  }
-  .caseItem {
-    height: 450px;
-  }
-}
-
-
-
-/* Ajustes Responsivos */
-@media screen and (max-width: 768px) {
-  .aboutTitle { font-size: 8rem; }
-  .aboutSubtitle { font-size: 1.5rem; text-align: left; }
-  .aboutHeader { margin-left: 0; padding: 0 15px; }
-
-  .timelineItemsWrapper::after { left: 31px; }
-
-  .timelineItem {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 15px;
-  }
-  
-  .timelineItem.left,
-  .timelineItem.right { left: 0%; }
-
-  .timelineItem.left::after,
-  .timelineItem.right::after,
-  .timelineItem.bigCircle.left::after,
-  .timelineItem.bigCircle.right::after {
-    left: 15px;
-  }
-
-  .timelineEnd {
-    justify-content: flex-start;
-    padding-left: 31px;
-    box-sizing: border-box;
-    transform: translateX(-50%);
-  }
-}

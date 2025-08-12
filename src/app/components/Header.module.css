@@ -8,6 +8,13 @@
   justify-content: space-between;
   align-items: flex-start;
   z-index: 1001;
+  transition: padding 0.3s ease, background-color 0.3s ease; /* Adicionado para smooth transition */
+}
+
+
+.header.scrolled {
+  padding: 1.2rem; /* Um pouco menor quando rolado */
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo sutil */
 }
 
 .header p {
@@ -49,6 +56,8 @@
   font-weight: 700;
   line-height: normal;
   transition: opacity 0.3s ease-in-out;
+  display: flex; /* Para controlar melhor o alinhamento */
+  align-items: center;
 }
 
 .menuIcon {
@@ -123,3 +132,24 @@
     opacity: 1;
   }
 }
+
+/* Estilos para telas menores que 769px (tablets e celulares) */
+@media (max-width: 768px) {
+  .header {
+    padding: 1.5rem; /* Reduz o padding em telas menores */
+    align-items: center; /* Centraliza verticalmente os itens restantes */
+  }
+
+  /* Esconde o subtítulo e o centerTop em telas menores */
+  .subtitle, .centerTop {
+    display: none;
+  }
+
+  /* Garante que o menuIcon apareça */
+  .menuIcon {
+    display: flex;
+  }
+
+  /* O navOverlay já é "mobile-first" por padrão */
+}
+
