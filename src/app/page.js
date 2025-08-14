@@ -147,17 +147,17 @@ const timelineData = [
 
 const casesData = [
   {
-    title: "Pesquisa com usuário",
+    title: "Pesquisas com Usuários",
     image: "/cases/user-research.png",
     link: "https://medium.com/@giosilvdsign/arqueopro-pesquisas-com-usu%C3%A1rio-ddf2573d0c4e",
   },
   {
-    title: "Styleguide: necessidades em campo",
+    title: "Acessibilidade e Escolhas de Design",
     image: "/cases/styleguide.png",
     link: "https://medium.com/@giosilvdsign/arqueopro-superando-desafios-do-sol-forte-no-trabalho-de-campo-arqueol%C3%B3gico-para-a-coleta-de-dados-e61b54a2b82a",
   },
   {
-    title: "Styleguide: necessidades em campo",
+    title: "Design, Design Patterns e Modelagem de Dados",
     image: "/cases/styleguide2.png",
     link: "https://medium.com/@giosilvdsign/design-e-design-patterns-em-banco-de-dados-arqueol%C3%B3gicos-an%C3%A1lise-e-proposta-de-modelagem-4a3ed12a4174",
   },

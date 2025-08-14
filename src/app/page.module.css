@@ -290,6 +290,33 @@
   align-self: flex-start;
 }
 
+@media screen and (max-width: 768px) { 
+.casesSection {
+  padding: 40px 0; /* Ajusta o padding vertical geral da seção */
+}
+
+/* Tira o padding e margem enormes do título */
+.casesTitlePill {
+  padding: 12px 40px; /* Reduz drasticamente o padding lateral */
+  margin-top: 40px;   /* Reduz a margem superior excessiva */
+  margin-bottom: 20px;/* Reduz a margem inferior */
+  font-size: 1.1rem;
+}
+
+/* Ajusta o grid para uma única coluna */
+.casesGrid {
+  grid-template-columns: 1fr; /* Força 1 coluna */
+  gap: 20px;                  /* Aumenta o espaço entre os projetos */
+  padding: 0 15px;            /* Adiciona respiro nas laterais para os cards não colarem */
+}
+
+/* Remove a altura fixa e usa proporção para consistência */
+.caseItem {
+  height: auto;        /* REMOVE a altura fixa de 450px que distorce as imagens */
+  aspect-ratio: 4 / 3; /* SUGESTÃO: Garante que todos os cards tenham a mesma proporção visual */
+}
+}
+
 /* Skills Section Styles */
 .skillsSection {
   padding: 80px 0px;
@@ -377,6 +404,7 @@
 .toolIcon:hover {
   transform: scale(1.1);
 }
+
 
 /* =================================== */
 /* About & Timeline Section Styles     */
