@@ -8,13 +8,13 @@
   justify-content: space-between;
   align-items: flex-start;
   z-index: 1001;
-  transition: padding 0.3s ease, background-color 0.3s ease; /* Adicionado para smooth transition */
+  transition: padding 0.3s ease, background-color 0.3s ease; 
 }
 
 
 .header.scrolled {
-  padding: 1.2rem; /* Um pouco menor quando rolado */
-  background-color: rgba(0, 0, 0, 0.8); /* Fundo sutil */
+  padding: 1.2rem; 
+  background-color: rgba(0, 0, 0, 0.8); 
 }
 
 .header p {
@@ -45,7 +45,7 @@
   margin: 0 2rem;
 }
 
-/* Esta é a parte central que você quer manter */
+
 .centerTop p {
   margin: 0;
   color: #FFF;
@@ -56,7 +56,7 @@
   font-weight: 700;
   line-height: normal;
   transition: opacity 0.3s ease-in-out;
-  display: flex; /* Para controlar melhor o alinhamento */
+  display: flex; 
   align-items: center;
 }
 
@@ -65,7 +65,7 @@
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
-  z-index: 1001; /* Ensures icon is above the overlay */
+  z-index: 1001; 
 }
 
 .menuIcon span {
@@ -75,7 +75,7 @@
   transition: all 0.3s ease;
 }
 
-/* Animate icon to an 'X' when open */
+
 .menuIcon.open span:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
@@ -90,10 +90,10 @@
 
 .hidden p {
   opacity: 0;
-  pointer-events: none; /* Impede que o texto invisível seja clicável */
+  pointer-events: none; 
 }
 
-/* New styles for the navigation overlay */
+
 .navOverlay {
   position: fixed;
   top: 0;
@@ -133,23 +133,23 @@
   }
 }
 
-/* Estilos para telas menores que 769px (tablets e celulares) */
+
 @media (max-width: 768px) {
   .header {
-    padding: 1.5rem; /* Reduz o padding em telas menores */
-    align-items: center; /* Centraliza verticalmente os itens restantes */
+    padding: 1.5rem; 
+    align-items: center; 
   }
 
-  /* Esconde o subtítulo e o centerTop em telas menores */
+  
   .subtitle, .centerTop {
     display: none;
   }
 
-  /* Garante que o menuIcon apareça */
+  
   .menuIcon {
     display: flex;
   }
 
-  /* O navOverlay já é "mobile-first" por padrão */
+  
 }
 

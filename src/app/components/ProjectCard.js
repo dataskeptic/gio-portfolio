@@ -12,7 +12,6 @@ const ProjectCard = ({
 }) => {
   return (
     <div className={styles.projectCard}>
-      {/* The text content, which will fade out on hover */}
       <div className={styles.textContent}>
         <h2 className={styles.title}>&quot;{title}&quot;</h2>
         <div className={styles.tags}>
@@ -28,17 +27,15 @@ const ProjectCard = ({
         </ul>
       </div>
 
-      {/* The single image container that expands */}
       <div className={styles.imageContainer}>
         <Image
           src={image}
           alt={title}
           layout="fill"
           objectFit="cover"
-          objectPosition="left" /* Ensures the image expands from the start */
+          objectPosition="left" 
           className={styles.projectImage}
         />
-        {/* The content that appears over the image on hover */}
         <div className={styles.hoverContent}>
           <h3>{hoverTitle}</h3>
           <a href={link} target="_blank" rel="noopener noreferrer">

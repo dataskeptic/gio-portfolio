@@ -8,14 +8,10 @@ export default function AboutMePage() {
       <Header />
 
       <main className={styles.mainContent}>
-        {/* ================================== */}
-        {/* Seção Superior (Imagem e Intro)    */}
-        {/* ================================== */}
         <section className={styles.heroSection}>
-          {/* Coluna da Imagem */}
           <div className={styles.imageContainer}>
             <Image
-              src="/profile-me.png" // Garanta que o nome do arquivo está correto
+              src="/profile-me.png" 
               alt="Foto de perfil de Gio Silveira"
               width={500}
               height={750}
@@ -23,7 +19,6 @@ export default function AboutMePage() {
             />
           </div>
 
-          {/* Coluna do Texto Introdutório e Título */}
           <div className={styles.introContainer}>
             <div className={styles.introText}>
               <p>

@@ -1,4 +1,4 @@
-"use client"; // Necessário para usar hooks como useState e useEffect
+"use client"; 
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -10,7 +10,6 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Se a página for rolada mais de 10px, marcamos como "scrolled"
       if (window.scrollY > 10) {
         setIsScrolled(true);
       } else {
@@ -18,14 +17,13 @@ export default function Header() {
       }
     };
 
-    // Adiciona o listener quando o componente é montado
     window.addEventListener('scroll', handleScroll);
 
-    // Remove o listener quando o componente é desmontado para evitar memory leaks
+    
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []); // O array vazio [] garante que este efeito rode apenas uma vez
+  }, []); 
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -76,7 +74,6 @@ export default function Header() {
           <p>[RESUME]</p>
         </div>
 
-        {/* Adicionamos uma classe condicional aqui */}
         <div
           className={`${styles.centerTop} ${isScrolled ? styles.hidden : ""}`}
         >

@@ -104,56 +104,57 @@
 }
 
 @media (max-width: 768px) {
-  /* Centraliza o conteúdo da home e adiciona respiro */
+ 
   .home {
     padding: 1rem;
-    align-items: center; /* Centraliza todo o conteúdo horizontalmente */
-    text-align: center; /* Garante que o texto dentro dos blocos fique centralizado */
+    align-items: center;
+    text-align: center;
   }
 
-  /* Alinha o container do título no centro */
+ 
   .mainTitle {
     align-items: center;
     padding-top: 0vh;
   }
 
-  /* AJUSTE CRÍTICO: Reduz drasticamente a fonte para caber na tela */
+ 
   .flirtation {
     font-size: 6.5rem; 
   }
+
   .breamcatcher {
     font-size: 6.4rem;
   }
   
-  /* Ajusta a sobreposição das linhas para a nova fonte menor */
+ 
   .firstLine {
      margin-bottom: -1.5rem; 
   }
 
-  /* REMOVE a margem fixa que quebra o layout no mobile */
+ 
   .secondLine {
     margin-left: 0; 
   }
 
-  /* Organiza os botões em coluna e centralizados */
+ 
   .navigation {
     
     align-items: center;
     gap: 2rem;
     margin-bottom: 2rem;
-    width: 80%; /* Ocupa a largura toda para centralizar corretamente */
+    width: 80%;
   }
 
-  /* REMOVE a margem fixa do subtítulo e ajusta o texto */
+ 
   .subTitle {
     margin-left: 0;
-    text-align: center; /* Centraliza o texto do parágrafo */
-    max-width: 90%; /* Evita que o texto encoste nas bordas */
+    text-align: center;
+    max-width: 90%;
     font-size: 0.875rem;
     margin-left: 0rem;
   }
 
-  /* Remove o container que pode estar causando problemas de alinhamento */
+ 
   .subTitleContainer {
     width: auto;
     margin-top: 0;
@@ -281,7 +282,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  align-items: flex-end; /* Default alignment to the right */
+  align-items: flex-end;
   padding: 0 0 0 0;
   box-sizing: border-box;
 }
@@ -292,32 +293,32 @@
 
 @media screen and (max-width: 768px) { 
 .casesSection {
-  padding: 40px 0; /* Ajusta o padding vertical geral da seção */
+  padding: 40px 0;
 }
 
-/* Tira o padding e margem enormes do título */
+
 .casesTitlePill {
-  padding: 12px 40px; /* Reduz drasticamente o padding lateral */
-  margin-top: 40px;   /* Reduz a margem superior excessiva */
-  margin-bottom: 20px;/* Reduz a margem inferior */
+  padding: 12px 40px;
+  margin-top: 40px;  
+  margin-bottom: 20px;
   font-size: 1.1rem;
 }
 
-/* Ajusta o grid para uma única coluna */
+
 .casesGrid {
-  grid-template-columns: 1fr; /* Força 1 coluna */
-  gap: 20px;                  /* Aumenta o espaço entre os projetos */
-  padding: 0 15px;            /* Adiciona respiro nas laterais para os cards não colarem */
+  grid-template-columns: 1fr;
+  gap: 20px;                 
+  padding: 0 15px;           
 }
 
-/* Remove a altura fixa e usa proporção para consistência */
+
 .caseItem {
-  height: auto;        /* REMOVE a altura fixa de 450px que distorce as imagens */
-  aspect-ratio: 4 / 3; /* SUGESTÃO: Garante que todos os cards tenham a mesma proporção visual */
+  height: auto;       
+  aspect-ratio: 4 / 3;
 }
 }
 
-/* Skills Section Styles */
+
 .skillsSection {
   padding: 80px 0px;
   display: flex;
@@ -363,7 +364,7 @@
   line-height: normal;
 }
 
-/* Custom bullet point to match the image */
+
 .skillsList li::before {
   content: '•';
   position: absolute;
@@ -406,9 +407,9 @@
 }
 
 
-/* =================================== */
-/* About & Timeline Section Styles     */
-/* =================================== */
+
+
+
 
 .aboutSection {
   padding: 100px 20px 0 20px;
@@ -442,7 +443,7 @@
   text-align: end;
 }
 
-/* Container principal da Timeline (Lógica Robusta com Flexbox) */
+
 .timeline {
   position: relative;
   max-width: 1200px;
@@ -452,13 +453,13 @@
   align-items: center;
 }
 
-/* Wrapper APENAS para os itens da timeline */
+
 .timelineItemsWrapper {
   position: relative;
   width: 100%;
 }
 
-/* A linha vertical da timeline */
+
 .timelineItemsWrapper::after {
   content: '';
   position: absolute;
@@ -479,7 +480,7 @@
   margin-bottom: 20px;
 }
 
-/* Estilo base para os círculos (pequeno) */
+
 .timelineItem::after {
   content: '';
   position: absolute;
@@ -491,23 +492,23 @@
   z-index: 1;
 }
 
-/* Estilo para os círculos grandes */
+
 .timelineItem.bigCircle::after {
   width: 64px;
   height: 64px;
 }
 
-/* Posicionamento para itens da ESQUERDA */
+
 .timelineItem.left { left: 0; }
 .timelineItem.left::after { right: -16px; }
 .timelineItem.bigCircle.left::after { right: -32px; }
 
-/* Posicionamento para itens da DIREITA */
+
 .timelineItem.right { left: 50%; }
 .timelineItem.right::after { left: -16px; }
 .timelineItem.bigCircle.right::after { left: -32px; }
 
-/* Caixa de conteúdo */
+
 .timelineContent {
   padding: 20px 30px;
   background: #1B1B1B;
@@ -556,7 +557,7 @@
   font-size: 1.2rem;
 }
 
-/* Ícone final da Timeline */
+
 .timelineEnd {
   width: 100%;
   display: flex;
@@ -581,7 +582,7 @@
   height: 40px;
 }
 
-/* Seção do Título "Cases" */
+
 .casesHeader {
   background-color: #1B1B1B;
   padding: 40px 20px 80px 20px;
@@ -601,23 +602,23 @@
   text-align: center;
 }
 
-/* =================================== */
-/* Cases Section Styles (VERSÃO CORRIGIDA) */
-/* =================================== */
 
-/* O container principal da seção */
+
+
+
+
 .casesSection {
   background-color: #1B1B1B;
 }
 
-/* O header que contém o título-pílula */
+
 .casesHeader {
   padding-bottom: 80px;
   display: flex;
   justify-content: center;
 }
 
-/* O título "Cases" estilizado como pílula */
+
 .casesTitlePill {
   padding: 12px 150px;
   background-color: #fbeedb;
@@ -631,7 +632,7 @@
   margin-top: 140px;
 }
 
-/* O grid que contém os cards dos projetos */
+
 .casesGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -640,7 +641,7 @@
   padding: 0px 10px;
 }
 
-/* Cada card individual */
+
 .caseItem {
   position: relative;
   overflow: hidden;
@@ -654,7 +655,7 @@
   transform: scale(1.02);
 }
 
-/* A nova classe para a tag <img> */
+
 .caseImage {
   display: block;
   width: 100%;   
@@ -662,7 +663,7 @@
   object-fit: cover;
 }
 
-/* Camada escura sobre a imagem para legibilidade */
+
 .caseItemOverlay {
   position: absolute;
   bottom: 0;
@@ -682,9 +683,9 @@
   line-height: 1.3;
 }
 
-/* ================================================== */
-/* Contact Section Styles (TÉCNICA NOVA E DEFINITIVA) */
-/* ================================================== */
+
+
+
 
 .contactSection {
   position: relative;
@@ -770,7 +771,7 @@
   display: block;
 }
 
-/* Caixa de links com a nova técnica */
+
 .contactBox {
   position: relative;
   background-color: rgba(27, 27, 27, 0.85);
@@ -802,14 +803,14 @@
   text-decoration: underline;
 }
 
-/* A linha de conexão */
+
 .lineConnectorBox {
   width: 100px;
   height: 1px;
   background-color: #fff;
 }
 
-/* Navegação inferior */
+
 .bottomNav {
   width: 100%;
   max-width: 1200px;

@@ -4,7 +4,6 @@ import ProjectCard from "./components/ProjectCard";
 import Header from "./components/Header";
 import Link from "next/link";
 
-
 const arqueoProData = {
   title: "ArqueoPro: Seu campo na palma da mão",
   tags: ["UX DESIGN", "UI DESIGN", "USER RESEARCH", "PRODUCT DESIGN"],
@@ -22,6 +21,7 @@ const arqueoProData = {
   hoverTitle:
     "Solução digital para campo arqueológico: app de coleta de dados integrado com GPS.",
 };
+
 const jaguaracambeData = {
   title: "Novo de design do site da ONG Jaguaracambé (versão de 2023).",
   tags: ["UX DESIGN", "UI DESIGN", "WEB DESIGN", "LANDING PAGE"],
@@ -35,7 +35,7 @@ const jaguaracambeData = {
   image: "/jaguaracambe.png",
   link: "https://medium.com/@giosilvdsign/novo-site-para-a-ong-jaguaracamb%C3%A9-design-de-2023-80e6dc466f8c",
   hoverTitle:
-    "Redesign do site da ONG Jaguaracambé para melhorar navegação e engajamento."
+    "Redesign do site da ONG Jaguaracambé para melhorar navegação e engajamento.",
 };
 
 const timelineData = [
@@ -343,7 +343,6 @@ export default function Home() {
               ))}
             </div>
 
-            {/* Ícone final da Timeline */}
             <div className={styles.timelineEnd}>
               <div className={styles.timelineEndIcon}>
                 <Image
@@ -370,8 +369,8 @@ export default function Home() {
                   src={caseItem.image}
                   alt={caseItem.title}
                   className={styles.caseImage}
-                  width={500} // Add appropriate width
-                  height={500} // Add appropriate height
+                  width={500}
+                  height={500}
                 />
 
                 <div className={styles.caseItemOverlay}>
@@ -415,7 +414,11 @@ export default function Home() {
                 <div className={styles.contactBox}>
                   <p>
                     <strong>Linkedin:</strong>{" "}
-                    <a href="https://www.linkedin.com/in/giovanna-silveira-a34662261/" target="_blank" rel="noopener noreferrer">
+                    <a
+                      href="https://www.linkedin.com/in/giovanna-silveira-a34662261/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       /Giovana Silveira
                     </a>
                   </p>
@@ -427,7 +430,11 @@ export default function Home() {
                   </p>
                   <p>
                     <strong>Medium:</strong>{" "}
-                    <a href="https://medium.com/@giosilvdsign" target="_blank" rel="noopener noreferrer">
+                    <a
+                      href="https://medium.com/@giosilvdsign"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       @giosilvdsign
                     </a>
                   </p>
