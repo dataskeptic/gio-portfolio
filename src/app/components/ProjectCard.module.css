@@ -28,7 +28,7 @@
   pointer-events: none;
 }
 
-/* --- The single, expanding image container --- */
+
 .imageContainer {
   position: absolute;
   top: 0;
@@ -53,7 +53,7 @@
 }
 
 
-/* --- Content that appears on top of the expanded image --- */
+
 .hoverContent {
   position: absolute;
   top: 0;
@@ -77,7 +77,7 @@
 }
 
 
-/* --- Text styling (unchanged, but provided for completeness) --- */
+
 .title {
   font-size: 2rem;
   font-weight: bold;
@@ -147,4 +147,123 @@
 .readButton:hover {
   background-color: #e66a3f;
   color: #fff;
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  .projectCard {
+    
+    max-width: 100%; 
+    width: 100%;     
+    flex-direction: column; 
+    min-height: auto; 
+    margin: 30px 0; 
+  }
+
+  .textContent {
+    position: relative; 
+    width: 100%;      
+    height: auto;     
+    padding: 20px;    
+    opacity: 1;       
+    pointer-events: auto; 
+  }
+
+  
+  .projectCard:hover .textContent {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .imageContainer {
+    position: relative; 
+    width: 100%;      
+    height: 200px;    
+    min-height: 200px; 
+    overflow: hidden; 
+  }
+
+  
+  .projectCard:hover .imageContainer {
+    width: 100%; 
+  }
+
+  .projectImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center; 
+  }
+
+  
+  .projectCard:hover .projectImage {
+    transform: scale(1); 
+  }
+
+  .hoverContent {
+    position: absolute; 
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+    padding: 20px; 
+    opacity: 1; 
+  }
+
+  
+  .projectCard:hover .hoverContent {
+    opacity: 1;
+  }
+
+  .hoverContent h3 {
+    font-size: 1.2rem; 
+    max-width: 90%;   
+    margin: 0 0 15px 0; 
+    line-height: 1.3;
+  }
+
+  .readButton {
+    padding: 10px 30px; 
+    font-size: 0.9rem; 
+  }
+
+  
+  .title {
+    font-size: 1.5rem; 
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .tags {
+    justify-content: center; 
+    margin-bottom: 15px;
+  }
+
+  .tag {
+    padding: 6px 12px; 
+    font-size: 0.7rem;
+  }
+
+  .description {
+    font-size: 0.9rem; 
+    margin-bottom: 15px;
+  }
+
+  .features li {
+    font-size: 0.9rem; 
+    margin-bottom: 8px;
+    padding-left: 18px;
+  }
+  .projectCard {
+    
+    margin-bottom: 20px; 
+  }
 }
