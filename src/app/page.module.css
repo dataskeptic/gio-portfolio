@@ -471,9 +471,85 @@
 }
 
 
+@media screen and (max-width: 768px) {
+  .skillsSection {
+    padding: 40px 10px; 
+    display: flex;
+    justify-content: center; 
+  }
 
+  .skillsContent {
+    width: 100%; 
+    padding: 20px; 
+    box-sizing: border-box; 
+  }
 
+  .skillsTitle {
+    font-size: 1.5rem; 
+  }
 
+  .skillsList {
+    font-size: 0.9rem; 
+    padding-left: 20px; 
+  }
+
+  .toolsTitle {
+    font-size: 1.2rem; 
+  }
+
+  .toolsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px; 
+    justify-content: center; 
+  }
+
+  .toolIcon {
+    height: 48px; 
+    width: 48px; 
+    padding: 8px; 
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skillsSection {
+    padding: 0px 0px; 
+    display: flex;
+    justify-content: center; 
+  }
+
+  .skillsContent {
+    width: 100%; 
+    padding: 20px; 
+    box-sizing: border-box; 
+  }
+
+  .skillsTitle {
+    font-size: 1.5rem; 
+  }
+
+  .skillsList {
+    font-size: 0.9rem; 
+    padding-left: 20px; 
+  }
+
+  .toolsTitle {
+    font-size: 1.2rem; 
+  }
+
+  .toolsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px; 
+    justify-content: center; 
+  }
+
+  .toolIcon {
+    height: 48px; 
+    width: 48px; 
+    padding: 8px; 
+  }
+}
 
 .aboutSection {
   padding: 100px 20px 0 20px;
