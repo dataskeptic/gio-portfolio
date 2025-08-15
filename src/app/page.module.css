@@ -833,25 +833,47 @@
   color: #fff;
 }
 
+/* 1. O botão agora é a tag <a>, então adicionamos estilos para links */
 .curriculoButton {
+  /* Seus estilos originais */
   background-color: #fbeedb;
   border-radius: 9999px;
   padding: 10px 25px;
   text-align: center;
   font-family: 'Cousine', monospace;
+
+  /* Estilos adicionais para fazer o link se comportar como um botão */
+  display: inline-block; /* Garante que o padding e outras propriedades funcionem bem */
+  text-decoration: none;  /* Remove o sublinhado padrão do link */
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out; /* Adiciona uma transição suave para o hover */
 }
 
+/* 2. Efeito de HOVER para o botão inteiro */
+.curriculoButton:hover {
+  background-color: #1B1B1B; /* Deixa o fundo um pouco mais escuro */
+  color: #E64500;
+  transform: scale(1.03);    /* Adiciona um leve zoom para dar feedback */
+}
+
+/* 3. Estilo para o texto principal "Currículo" (pode manter o seu) */
 .curriculoButton span {
   display: block;
   color: #000;
   font-weight: 700;
   font-size: 1rem;
+  line-height: 1.2; /* Melhora o espaçamento entre as linhas */
 }
 
-.curriculoButton a {
+.curriculoButton:hover  span{
+  color: #E64500;
+}
+
+/* 4. Novo estilo para o texto "baixar" para replicar a aparência do link antigo */
+.downloadText {
   color: #555;
   font-size: 0.8rem;
-  text-decoration: underline;
+  font-weight: normal; /* O peso da fonte do texto "baixar" agora é normal */
+  text-decoration: underline; /* Mantém o sublinhado para indicar que é um download */
 }
 
-
+/* A regra ".curriculoButton a" não é mais necessária e pode ser removida */

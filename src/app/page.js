@@ -446,12 +446,15 @@ export default function Home() {
               <a href="#top" className={styles.backToTop}>
                 Back to top
               </a>
-              <div className={styles.curriculoButton}>
+
+              <a
+                href="/Currículo Gio Silveira UXUI Designer.pdf" 
+                download="Curriculo-Gio-Silveira.pdf"
+                className={styles.curriculoButton} 
+              >
                 <span>Currículo</span>
-                <a href="/seu-curriculo.pdf" download>
-                  baixar
-                </a>
-              </div>
+                <span className={styles.downloadText}>baixar</span>{" "}
+              </a>
             </div>
           </div>
         </section>
