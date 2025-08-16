@@ -683,6 +683,120 @@
 }
 
 
+@media screen and (max-width: 768px) {
+  .aboutSection {
+    padding: 60px 15px;
+  }
+
+  .aboutHeader {
+    margin-left: 0;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .aboutTitle {
+    font-size: 6rem;
+  }
+
+  .aboutSubtitle {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .timeline {
+    padding: 0;
+  }
+
+  
+  .timelineItemsWrapper {
+    position: relative; 
+    padding: 0;
+  }
+
+  
+  .timelineItemsWrapper::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background-color: #E64500;
+    top: 0;
+    bottom: 0;
+    left: 20px; 
+    transform: none;
+    z-index: 0;
+  }
+
+  
+  .timelineItem {
+    width: 100% !important;
+    position: relative;
+    padding-left: 45px !important; 
+    padding-right: 10px !important;
+    box-sizing: border-box;
+    left: 0 !important; 
+    margin-bottom: 30px;
+  }
+
+  
+  .timelineItem::after {
+    content: '';
+    position: absolute;
+    width: 24px !important;
+    height: 24px !important;
+    border-radius: 50%;
+    background-color: #E64500 !important;
+    z-index: 1;
+    left: 20px !important;
+    transform: translateX(-50%) !important; 
+    top: 25px !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+
+  
+  .timelineItem.bigCircle::after {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .timelineContent {
+    padding: 20px;
+    background: #1B1B1B;
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    text-align: left;
+  }
+
+  
+  .timelineEnd {
+    width: 100%;
+    position: relative; 
+    height: 60px; 
+  }
+
+  .timelineEndIcon {
+    width: 50px !important;
+    height: 50px !important;
+    background-color: #fbeedb;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: absolute !important;
+    top: 0;
+    left: 20px !important; 
+    transform: translateX(-50%) !important; 
+    margin: 0; 
+  }
+
+  .iconSvg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+
 .casesHeader {
   background-color: #1B1B1B;
   padding: 40px 20px 80px 20px;
