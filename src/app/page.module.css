@@ -1126,3 +1126,142 @@
   text-decoration: underline;
 }
 
+
+@media screen and (max-width: 768px) {
+  
+  .contactSection {
+    
+    background-image: url('/mobile-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 110vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+    width: 100%;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 50; 
+  }
+
+  
+  .contactBackgroundImage {
+    display: none;
+  }
+
+  
+  .contactContentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: static;
+    padding: 0;
+  }
+
+  .contactContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 30px; 
+  }
+
+  
+  .speechBubble {
+    display: flex !important; 
+    flex-direction: column;
+    width: 90%;
+    max-width: 350px;
+    padding: 20px;
+    text-align: left;
+    background-color: rgba(240, 240, 240, 0.9);
+    border-radius: 14px;
+    margin-top: 40px;
+  }
+  
+  .speechBubble p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .speechBubble a {
+    text-align: right;
+  }
+
+  
+  .middleContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;;
+  }
+
+  
+  .profileImageContainer {
+    width: 85%;
+    max-width: 320px;
+    border-radius: 0; 
+    border: 3px solid #fff;
+    overflow: hidden;
+  }
+
+  .profileImageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  
+  .lineConnectorBox {
+    width: 2px;
+    height: 80px; 
+    background-color: #fff;
+    margin: 0 0; 
+  }
+
+  
+  .contactBox {
+    width: 90%;
+    max-width: 350px;
+    padding: 25px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: rgba(27, 27, 27, 0.85);
+    border: 1px solid #fff;
+    height: auto;
+  }
+  
+  
+  .bottomNav {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding-top: 0px 20px; 
+    margin-top: 80px;
+    margin-bottom: 30px;
+  }
+
+  .backToTop {
+    font-size: 1rem; 
+  }
+
+  .curriculoButton {
+    padding: 10px 22px; 
+  }
+
+  .curriculoButton span {
+    font-size: 0.9rem;
+  }
+
+  .downloadText {
+    font-size: 0.7rem;
+  }
+}
